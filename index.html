@@ -6,51 +6,143 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <title>Personal Website</title>
 </head>
 <body>
     <header>
-        <div class="header flex">
-            <a href="index.html">
-                <h1><i class="fas fa-home"></i></h1>
-            </a>
-            <nav>
-                <a href = "index.html">Home</a>
-                <a href = "#">Portfolio</a>
-                <a href="about.html">About</a>
-            </nav>
-        </div>
+        <h1>Personal Website</h1>
     </header>
-    <!--
-    <div style = "width: 50%; min-width: 450px;
-    max-width: 800px; height: 450px; background-color: rgba(255, 0, 0, 0.3);
-    z-index: -1; position: fixed"></div>
-    -->
     <main>
-        <section>
-            <div class="home container flex" style="flex-wrap: wrap;">
-                <div class="main-info" style = "padding-left: 50px">
-                    <h1 style = "font-size: 42px; margin: 40px 0">Hello, I'm Bryan Cayanan</h1>
-                    <p>Prospective web developer</p>
+        <section class="hero">
+            <h2>Hello, I'm Bryan Cayanan</h2>
+            <p>I am a self-taught web developer trying to land
+                my first job in the industry
+            </p>
+            <p>
+                Below are some of my personal projects
+                as well as my contact information
+            </p>
+            <p>
+                Thank you for visiting my page
+            </p>
+        </section>
+        <section class="personal-project-showcase">
+            <div class="personal-projects">
+                <h2>Personal Projects</h2>
+                <div class="personal-project">
+                    <div class="personal-project-head">
+                        <h3>Mobile First Design</h3>
+                    </div>
+                    <div class="personal-project-body">
+                        <p><strong>A rough draft of a website made for practicing responsive, mobile first design</strong></p>
+                        <ul>
+                            <li>&gt; Media queries</li>
+                            <li>&gt; Flex and grid boxes</li>
+                            <li>&gt; Hamburger navigation menu for smaller screen sizes</li>
+                            <li>&gt; Vanilla JavaScript only</li>
+                        </ul>
+                        <a href="https://bryanc123.github.io/Mobile-First-Design/">Go to Site</a>
+                    </div>
                 </div>
-                <!-- For mobile, add padding-left: 50px to main-aside -->
-                <div class="main-aside" style = "width: 400px; height: 450px; border:1px solid blue; line-height: 2em">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Recusandae molestias ducimus saepe doloribus quos architecto fugit
-                        laborum accusamus vitae dicta! Recusandae sunt magnam consequatur beatae
-                        dolores possimus expedita tenetur voluptate maxime id quas, laudantium
-                        dolorum nisi magni ea in eveniet ab vero laboriosam ipsa earum enim.
-                        Rerum minus excepturi vero?</p>
+                <div class="personal-project slide-in">
+                    <div class="personal-project-head">
+                        <h3>Quiz App</h3>
+                    </div>
+                    <div class="personal-project-body">
+                        <p><strong>A basic quiz app that displays right and wrong answers after completion</strong></p>
+                        <ul>
+                            <li>&gt; Navigation features to choose currently displayed question</li>
+                            <li>&gt; Reset button to restart quiz after completion</li>
+                            <li>&gt; Vanilla JavaScript only</li>
+                        </ul>
+                        <a href="https://bryanc123.github.io/Plain-JavaScript-Quiz/">Take Quiz</a>
+                    </div>
+                </div>
+                <div class="personal-project slide-in">
+                    <div class="personal-project-head">
+                        <h3>Book Search React App</h3>
+                    </div>
+                    <div class="personal-project-body">
+                        <p><strong>Search for books through the Open Library website</strong></p>
+                        <ul>
+                            <li>&gt; Created with Create React App</li>
+                            <li>&gt; React hooks</li>
+                            <li>&gt; Uses the <a href="https://openlibrary.org/dev/docs/api/search">Open Library search API</a></li>
+                        </ul>
+                        <a href="https://github.com/bryanc123/Book-List">Source Code</a>
+                    </div>
+                </div>
+                <div class="personal-project slide-in">
+                    <div class="personal-project-head">
+                        <h3>Employee Records Angular App</h3>
+                    </div>
+                    <div class="personal-project-body">
+                        <p><strong>Search and create employee records (test only, so POST
+                            operations do not actually change anything on the server)</strong>
+                        </p>
+                        <ul>
+                            <li>&gt; TypeScript</li>
+                            <li>&gt; Form validation</li>
+                            <li>&gt; Uses the <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder API</a></li>
+                        </ul>
+                        <a href="https://github.com/bryanc123/Employee-Records-Angular">Source Code</a>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="skills">
+            <h2>Web Dev Technologies</h2>
+            <p><strong>Below are the web development languages and technologies that I have
+                experience with</strong></p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript and TypeScript (including ES6 and beyond)</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>React</li>
+                <li>Angular 2+</li>
+                <li>MySQL</li>
+                <li>PHP</li>
+                <li>Git</li>
+            </ul>
+        </section>
     </main>
     <footer>
-        <ul>
-            <li>E-mail: cayanan.bryanau@gmail.com</li>
-            <li>GitHub: https://github.com/bryanc123</li>
+        <h2>Contact and Other Information</h2>
+        <ul class="contact">
+            <li><strong>Phone Number:</strong> 805-608-0066</li>
+            <li><strong>Email: </strong> cayanan.bryanau@gmail.com</li>
+            <li><strong>GitHub: </strong>
+                <a href="https://github.com/bryanc123">https://github.com/bryanc123</a></li>
         </ul>
     </footer>
+    <script>
+        const sliders = document.querySelectorAll(".slide-in");
+
+        const slideInOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(
+            entries,
+            appearOnScroll
+        ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add("appear");
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+        },
+        slideInOptions);
+
+        sliders.forEach(slider => {
+            appearOnScroll.observe(slider);
+        });
+    </script>
 </body>
 </html>

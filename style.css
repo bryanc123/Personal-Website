@@ -1,130 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 :root {
-    --bg-primary: #00008B;
+    --color-primary: #0492C2;
+    --color-secondary: #045298;
 }
 
-* {
-    padding: 0;
-    margin: 0;
+/* Reset */
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+html {
+    font-family: Roboto;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+ol, ul {
+    list-style: none;
 }
 
 main {
-    line-height: 1em;
+    background-color: #EBECF0;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+section {
+    padding: 1em;
+    text-align: center;
+}
+
+/* Animations */
+
+.slide-in {
+    transform: translateY(25%);
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in,
+      -webkit-transform 400ms ease-in;
+    opacity: 0;
+}
+
+.slide-in.appear {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* Header */
 
-nav a {
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1em;
+}
+
+/* Hero */
+
+/* Personal Projects */
+
+.personal-project-showcase {
+    background-color: var(--color-secondary);
+}
+
+.personal-project-showcase ul {
+    margin-bottom: 0.8em;
+}
+
+.personal-projects h2 {
+    color: white;
+}
+
+.personal-project {
+    background-color: #F0FFFF;
+    border-radius: 20px;
+    margin: 0 auto 2em auto;
+    max-width: 550px;
+}
+
+.personal-project-head {
+    background-color: orange;
+    border-radius: 20px 20px 0 0;
     padding: 10px;
 }
 
-header {
-    color: white;
-    background-color: var(--bg-primary);
+.personal-project-body {
+    padding: 1em;
 }
 
-.header {
-    padding: 20px;
-    max-width: 1100px;
+.personal-project h3 {
+    margin-bottom: 0.8em;
 }
 
-nav a {
-    border-bottom: 2px solid transparent;
+.personal-project ul {
+    margin-bottom: 2em;
 }
 
-nav a:hover {
-    border-bottom: 2px solid #2A9DF4;
-    color: #2A9DF4;
+.personal-project ul a {
+    display: inline;
+    padding: 0;
 }
 
-/* Main Section */
-
-.main-info p {
-    font-size: 24px;
+.personal-project-body > a {
+    background-color: orange;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+    padding: 0.8em;
+    text-decoration: none;
 }
 
-.container {
-    max-width: 1100px;
-    height: 100%;
-    padding: 20px;
-    margin: 20px 0;
+.personal-project-body > a:hover {
+    background-color: #FFC87C;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+    text-decoration: none;
 }
 
-.home h1 {
-    font-size: 36px;
+/* Skills */
+
+.skills ul {
+    line-height: 2em;
+    text-align:left;
 }
+
+/* Footer */
 
 footer {
-    font-size: 14px;
-    position: fixed;
-    left: 0;
-    bottom: 0; 
-    width: 100%;
-    background-color: #00008B;
+    background-color: var(--color-secondary);
     color: white;
-    padding: 20px;
+    padding: 1em;
 }
 
-footer li {
-    list-style-type: none;
-}
-
-li {
-    margin: 0px 0px 8px 0px;
-}
-
-/* About */
-
-.about h2 {
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: var(--bg-primary);
+footer a {
     color: white;
+    text-decoration: none;
 }
 
-.frontend-card {
-    width: 200px;
-    border: 2px solid var(--bg-primary);
+footer ul li {
+    margin-bottom: 0.8em;
 }
 
-.frontend-card ul {
-    margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 1.5rem;
+    }
 
-.backend-card {
-    width: 200px;
-    border: 2px solid var(--bg-primary);
-}
+    section {
+        padding: 3em;
+    }
 
-.backend-card ul {
-    margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-
-/* Other */
-
-p {
-    margin-bottom: 20px;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    .personal-project ul {
+        font-size: 20px;
+    }
 }
