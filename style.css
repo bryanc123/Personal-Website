@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
+
 :root {
     --color-primary: #0492C2;
     --color-secondary: #045298;
@@ -42,7 +44,13 @@ section {
 
 /* Animations */
 
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .slide-in {
+    -webkit-transform: translateY(25%);
     transform: translateY(25%);
     transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
     transition: opacity 250ms ease-in, transform 400ms ease-in;
@@ -65,7 +73,29 @@ header {
     padding: 1em;
 }
 
+.page-heading {
+    font-family: Estonia;
+    font-size: 2.5em;
+}
+
+.page-subheading {
+    font-size: 0.6em;
+}
+
 /* Hero */
+
+.hero {
+    -webkit-animation: fade-in 1s ease-in;
+    animation: fade-in 1s ease-in;
+}
+
+.hero strong {
+    color: var(--color-secondary);
+}
+
+.hero-heading {
+    font-size: 1.25em;
+}
 
 /* Personal Projects */
 
@@ -73,45 +103,37 @@ header {
     background-color: var(--color-secondary);
 }
 
-.personal-project-showcase ul {
-    margin-bottom: 0.8em;
-}
-
 .personal-projects h2 {
     color: white;
 }
 
 .personal-project {
-    background-color: #F0FFFF;
+    background-color: white;
     border-radius: 20px;
     margin: 0 auto 2em auto;
     max-width: 550px;
 }
 
-.personal-project-head {
+.personal-project__head {
     background-color: orange;
     border-radius: 20px 20px 0 0;
-    padding: 10px;
+    padding: 20px;
 }
 
-.personal-project-body {
+.personal-project__body {
     padding: 1em;
 }
 
-.personal-project h3 {
-    margin-bottom: 0.8em;
-}
-
-.personal-project ul {
+.personal-project__details {
     margin-bottom: 2em;
 }
 
-.personal-project ul a {
+.personal-project_details a {
     display: inline;
     padding: 0;
 }
 
-.personal-project-body > a {
+.personal-project__link {
     background-color: orange;
     border-radius: 10px;
     color: black;
@@ -120,7 +142,7 @@ header {
     text-decoration: none;
 }
 
-.personal-project-body > a:hover {
+.personal-project__link:hover {
     background-color: #FFC87C;
     border-radius: 10px;
     color: black;
