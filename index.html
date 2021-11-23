@@ -10,17 +10,38 @@
 </head>
 <body>
     <header>
-        <h1 class="page-heading">Bryan Cayanan<span class="page-subheading"> | Portfolio</span></h1>
+        <div class="header">
+            <h1 class="header__heading">Bryan Cayanan
+                <span class="header__subheading"> | Portfolio</span>
+            </h1>
+            <div class="header__navigation-links">
+                <a href="" class="header__navigation-link">Blog</a>
+                <a href="https://github.com/bryanc123" class="header__navigation-link">GitHub</a>
+                <a href="" class="header__navigation-link">About</a>
+            </div>
+            <div class="header__hamburger-icon-container">
+                <a href="#" class="header__hamburger-icon" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars fa-2x"></i>
+                    <i class="fas fa-times fa-2x" style="display:none"></i>
+                </a>
+            </div>
+        </div>
     </header>
     <main>
+        <section class="mobile-menu">
+            <div class="mobile-menu__navigation-links">
+                <a href="" class="mobile-menu__navigation-link">Blog</a>
+                <a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a>
+                <a href="" class="mobile-menu__navigation-link">About</a>
+            </div>
+        </section>
         <section class="hero">
             <h2 class="hero-heading">Hello, I'm Bryan Cayanan</h2>
-            <p>I am a self-taught <strong>web developer</strong> trying to land
-                my first web development job
+            <p>I am a self-taught <strong>web developer</strong> focused mainly on 
+                <strong>frontend</strong> web development
             </p>
             <p>
-                My studies have primarily been focused on 
-                <strong>frontend web development</strong>
+                Thank you for visiting my page
             </p>
             <p>
                 <strong>Scroll down</strong> to see some of my personal projects
@@ -68,7 +89,7 @@
                 </div>
                 <div class="personal-project slide-in">
                     <div class="personal-project__head">
-                        <h3 class="personal-project__heading">Employee Records Angular App</h3 class="personal-project__heading">
+                        <h3 class="personal-project__heading">Employees Angular App</h3 class="personal-project__heading">
                     </div>
                     <div class="personal-project__body">
                         <p class="personal-project__description"><strong>Search and create employee records (test only, so POST
@@ -132,11 +153,29 @@
         </ul>
     </footer>
     <script>
+        const toggleMobileMenu = () => {
+
+            let mobileMenu = document.querySelector(".mobile-menu");
+
+            if(!mobileMenu.style.display || mobileMenu.style.display == "none") {
+                mobileMenu.style.display = "block";
+                document.querySelector(".fa-bars").style.display = "none";
+                document.querySelector(".fa-times").style.display = "inline";
+            }
+            else if(mobileMenu.style.display == "block") {
+                mobileMenu.style.display = "none";
+                document.querySelector(".fa-bars").style.display = "inline";
+                document.querySelector(".fa-times").style.display = "none";
+            }
+        };
+
+        // animations
+
         const sliders = document.querySelectorAll(".slide-in");
 
         const slideInOptions = {
             threshold: 0,
-            rootMargin: "0px 0px -50px 0px"
+            rootMargin: "0px 0px 20px 0px"
         };
 
         const appearOnScroll = new IntersectionObserver(function(
