@@ -18,9 +18,9 @@
                 </a>
             </h1>
             <div class="header__navigation-links">
-                <a href="" class="header__navigation-link">Blog</a>
+                <a href="./blog.html" class="header__navigation-link">Blog</a>
                 <a href="https://github.com/bryanc123" class="header__navigation-link">GitHub</a>
-                <a href="" class="header__navigation-link">About</a>
+                <a href="./about.html" class="header__navigation-link">About</a>
             </div>
             <div class="header__hamburger-icon-container">
                 <a href="#" class="header__hamburger-icon" onclick="toggleMobileMenu()">
@@ -33,13 +33,12 @@
     <main>
         <section class="mobile-menu">
             <div class="mobile-menu__navigation-links">
-                <a href="" class="mobile-menu__navigation-link">Blog</a>
+                <a href="./blog.html" class="mobile-menu__navigation-link">Blog</a>
                 <a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a>
-                <a href="" class="mobile-menu__navigation-link">About</a>
+                <a href="./about.html" class="mobile-menu__navigation-link">About</a>
             </div>
         </section>
         <section class="blog-heading">
-            <h2>Blog</h2>
             <p>This is not a real blog</p>
         </section>
         <section class="blog-posts">
@@ -154,34 +153,6 @@
                 document.querySelector(".fa-times").style.display = "none";
             }
         };
-
-        // animations
-
-        const sliders = document.querySelectorAll(".slide-in");
-
-        const slideInOptions = {
-            threshold: 0,
-            rootMargin: "0px 0px 20px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(
-            entries,
-            appearOnScroll
-        ) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add("appear");
-                appearOnScroll.unobserve(entry.target);
-            }
-        });
-        },
-        slideInOptions);
-
-        sliders.forEach(slider => {
-            appearOnScroll.observe(slider);
-        });
     </script>
 </body>
 </html>

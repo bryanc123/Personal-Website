@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Website</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="header__heading">
+                <a href="./index.html" class="header__link">
+                    Bryan Cayanan
+                    <span class="header__subheading"> | Portfolio</span>
+                </a>
+            </h1>
+            <div class="header__navigation-links">
+                <a href="./blog.html" class="header__navigation-link">Blog</a>
+                <a href="https://github.com/bryanc123" class="header__navigation-link">GitHub</a>
+                <a href="./about.html" class="header__navigation-link">About</a>
+            </div>
+            <div class="header__hamburger-icon-container">
+                <a href="#" class="header__hamburger-icon" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars fa-2x"></i>
+                    <i class="fas fa-times fa-2x" style="display:none"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="mobile-menu">
+            <div class="mobile-menu__navigation-links">
+                <a href="./blog.html" class="mobile-menu__navigation-link">Blog</a>
+                <a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a>
+                <a href="./about.html" class="mobile-menu__navigation-link">About</a>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__container">
+                <div class="about__content">
+                    <h2 class="about__heading">About Me</h2>
+                    <p>
+                        Hello, my name is Bryan Cayanan.
+                    </p>
+                    <p>
+                        I graduated from the Angeles University Foundation in the Philippines back in 2015
+                        and received a bachelor's degree in information technology, but I was not really
+                        interested in web development until a couple of years later.
+                    <p>
+                        At my university, IT students studied
+                        only the basics of web development. We learned HTML,
+                        CSS, JavaScript, and some PHP, but the bulk of our programming studies
+                        centered around writing desktop applications using Java or C#.
+                    </p>
+                    <p>
+                        Since web development was not the main focus in my college, I am mostly self-taught
+                        as far as web development goes. Articles, tutorials, books, documentation,
+                        and other people's code served as learning references.
+                    </p>
+                    <p>
+                        Immediately after college, I did not have any luck landing jobs as a programmer,
+                        and due to personal circumstances, I had to step away from programming for a while.
+                        Eventually, I started learning programming again and turned my attention to web
+                        development because of the remote work opportunities that were available.
+                    </p>
+                    <p>
+                        It is my goal to become a full-stack developer, but I am primarily
+                        interested in frontend development. However, if I find employment as a web developer,
+                        then I am willing to learn any kind of technology, frontend or backend.
+                        Web technologies are always evolving, so I am always interested in learning more about them while maintaining my current skills.
+                    </p>
+                    <p>
+                        Thank you for reading.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Contact and Other Information</h2>
+        <ul class="contact">
+            <li><strong>Phone Number:</strong> 805-608-0066</li>
+            <li><strong>Email: </strong> cayanan.bryanau@gmail.com</li>
+            <li><strong>GitHub: </strong>
+                <a href="https://github.com/bryanc123">https://github.com/bryanc123</a></li>
+        </ul>
+    </footer>
+    <script>
+        const toggleMobileMenu = () => {
+
+            let mobileMenu = document.querySelector(".mobile-menu");
+
+            if(!mobileMenu.style.display || mobileMenu.style.display == "none") {
+                mobileMenu.style.display = "block";
+                document.querySelector(".fa-bars").style.display = "none";
+                document.querySelector(".fa-times").style.display = "inline";
+            }
+            else if(mobileMenu.style.display == "block") {
+                mobileMenu.style.display = "none";
+                document.querySelector(".fa-bars").style.display = "inline";
+                document.querySelector(".fa-times").style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

@@ -76,6 +76,7 @@ header {
 .header {
     display: flex;
     justify-content: space-between;
+    max-width: 1300px;
 }
 
 .header__heading {
@@ -287,6 +288,30 @@ header {
     cursor: pointer;
 }
 
+/* About */
+
+.about {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.about__content {
+    background-color: white;
+    max-width: 900px;
+    padding: 1em;
+    text-align: left;
+}
+
+.about__content p {
+    line-height: 2em;
+}
+
+.about__heading {
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+    text-decoration-thickness: 2px;
+}
+
 /* Footer */
 
 footer {
@@ -363,5 +388,11 @@ footer ul li {
 
     .personal-project ul {
         font-size: 20px;
+    }
+
+    /* Blog */
+
+    .blog-posts {
+        max-width: 1300px;
     }
 }
