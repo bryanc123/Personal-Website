@@ -168,7 +168,7 @@ header {
     background-color: var(--color-secondary);
 }
 
-.personal-projects h2 {
+.personal-projects__intro {
     color: white;
 }
 
@@ -375,6 +375,20 @@ footer ul li {
     }
 }
 
+@media only screen and (min-width: 600px) {
+    /* Heroo */
+
+    .hero__heading {
+        font-size: 1.2em;
+    }
+    
+    /* About */
+
+    .about__heading {
+        font-size: 1.2em;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     html {
         font-size: 1.5rem;
@@ -394,5 +408,12 @@ footer ul li {
 
     .blog-posts {
         max-width: 1300px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .personal-projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
