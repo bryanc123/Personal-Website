@@ -217,14 +217,45 @@ header {
 
 /* Skills */
 
-.skills ul {
+.tab-links-container {
+    display: flex;
+    text-align:left;
+}
+
+.tab-links {
+    background-color: var(--color-secondary);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 10px 0 0;
+    padding: 1em;
+}
+
+.tab-links.active {
+    background-color: var(--color-primary);
+}
+
+.skills-tab-content {
+    background-color: white;
+    min-height: 300px;
+    padding: 1em;
+}
+
+.skills-tab-content ul {
     line-height: 2em;
     text-align:left;
 }
 
-/* Blog */
+.backend-skills {
+    display: none;
+}
 
-/* Blog Heading */
+.tools {
+    display: none;
+}
+
+/* Blog */
 
 .blog-heading {
     text-align: left;
@@ -342,8 +373,6 @@ footer ul li {
 
     /* Blog */
 
-    /* Blog Heading */
-
     .blog-heading {
         text-align: left;
         padding: 1em;
@@ -364,7 +393,7 @@ footer ul li {
 
     .blog-post__image {
         background-color: orange;
-        height: 300px;
+        height: 100px;
         padding: 0.5em;
         width: 100%;
     }
@@ -376,10 +405,19 @@ footer ul li {
 }
 
 @media only screen and (min-width: 600px) {
-    /* Heroo */
+    /* Hero */
 
     .hero__heading {
         font-size: 1.2em;
+    }
+
+    /* Blog */
+
+    .blog-post__image {
+        background-color: orange;
+        height: 150px;
+        padding: 0.5em;
+        width: 100%;
     }
     
     /* About */
@@ -404,16 +442,48 @@ footer ul li {
         font-size: 20px;
     }
 
+    /* Skills */
+
+    .skills-tab-content {
+        min-height: 500px;
+    }
+
     /* Blog */
 
     .blog-posts {
         max-width: 1300px;
     }
+
+    .blog-post__image {
+        background-color: orange;
+        height: 300px;
+        padding: 0.5em;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1300px) {
+    /* Personal Projects */
+
     .personal-projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Blog */
+
+    .blog-post__image {
+        background-color: orange;
+        height: 400px;
+        padding: 0.5em;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    /* Personal Projects */
+
+    .personal-project {
+        min-width: 800px;
     }
 }

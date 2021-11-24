@@ -135,24 +135,40 @@
         </section>
         <section class="skills">
             <h2>Web Dev Technologies</h2>
-            <p><strong>Below are the web development languages and technologies that I have
+            <p><strong>Below are the web dev languages and technologies that I have
                 experience with</strong></p>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (ES6 and beyond) and TypeScript</li>
-                <li>Node.js</li>
-                <li>npm</li>
-                <li>Express</li>
-                <li>React</li>
-                <li>React Router</li>
-                <li>Angular 2+</li>
-                <li>Angular CLI</li>
-                <li>MySQL</li>
-                <li>PHP</li>
-                <li>Git</li>
-                <li>Postman</li>
-            </ul>
+            <div class="tab-links-container">
+                <button class="tab-links active" onclick="openSkillSection(event, 'frontend-skills')">Frontend</button>
+                <button class="tab-links" onclick="openSkillSection(event, 'backend-skills')">Backend</button>
+                <button class="tab-links" onclick="openSkillSection(event, 'tools')">Tools</button>
+            </div>
+            <div class="skills-tab-content frontend-skills">
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+) and TypeScript</li>
+                    <li>React</li>
+                    <li>Angular 2+</li>
+                    <li>Angular CLI</li>
+                    <li>React Router</li>
+                </ul>
+            </div>
+            <div class="skills-tab-content backend-skills">
+                <ul>
+                    <li>Node.js</li>
+                    <li>npm</li>
+                    <li>Express</li>
+                    <li>MySQL</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+            <div class="skills-tab-content tools">
+                <ul>
+                    <li>Git</li>
+                    <li>Postman</li>
+                    <li>XAMPP</li>
+                </ul>
+            </div>
         </section>
     </main>
     <footer>
@@ -208,6 +224,25 @@
         sliders.forEach(slider => {
             appearOnScroll.observe(slider);
         });
+
+        // skills tabs
+
+        const openSkillSection = (event, skillSection) => {
+            let i, tabContent, tabLinks;
+
+            tabContent = document.getElementsByClassName("skills-tab-content");
+            for(let i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+
+            tabLinks = document.getElementsByClassName("tab-links");
+            for(let i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+
+            document.querySelector("." + skillSection).style.display = "block";
+            event.currentTarget.className += " active";
+        };
     </script>
 </body>
 </html>
