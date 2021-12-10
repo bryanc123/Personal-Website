@@ -127,6 +127,19 @@ header {
     display:none;
 }
 
+/* Contact Bar */
+
+.contact-bar {
+    align-items: flex-start;
+    background-color: #303030;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
 /* Mobile Menu */
 
 .mobile-menu {
@@ -156,18 +169,36 @@ header {
 
 /* Hero */
 
-/* .hero {
-    -webkit-animation: fade-in 1s ease-in;
-    animation: fade-in 1s ease-in;
-} */
+.hero {
+    background-image: url('images/laptop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    min-height: 300px;
+    position: relative;
+}
+
+.hero-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 .hero strong {
-    color: var(--color-secondary);
+    color: #00FFFF;
 }
 
 .hero-heading {
+    color: white;
     font-size: 1.25em;
-    margin-bottom: 2em;
+    margin: 2em 0;
+}
+
+.hero p {
+    color: white;
 }
 
 .hero p:nth-child(2) {
@@ -388,7 +419,13 @@ header {
 footer {
     background-color: var(--color-secondary);
     color: white;
+    display: flex;
+    flex-direction: column;
     padding: 1em;
+}
+
+footer h2 {
+    margin-bottom: 10px;
 }
 
 footer a {
@@ -400,6 +437,18 @@ footer ul li {
     margin-bottom: 0.8em;
 }
 
+.footer-section {
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 350px) {
+    /* Hero */
+
+    .hero-text-break {
+        display: none;
+    }
+}
+
 @media only screen and (min-width: 500px) {
     /* Header */
 
@@ -409,6 +458,22 @@ footer ul li {
 
     .header__hamburger-icon-container {
         display: none;
+    }
+
+    /* Hero */
+
+    .hero {
+        background-size: 100%;
+    }
+
+    /* Contact Bar */
+
+    .contact-bar {
+        align-items: flex-start;
+        flex-direction: row;
+        font-size: 16px;
+        justify-content: space-between;
+        padding: 10px 20px;
     }
 
     /* Blog */
@@ -441,6 +506,16 @@ footer ul li {
     .blog-post__body {
         padding: 0.5em;
         text-align: left;
+    }
+
+    /* Footer */
+
+    footer {
+        flex-direction: row;
+    }
+
+    .footer-section {
+        margin-right: 60px;
     }
 }
 
@@ -476,6 +551,10 @@ footer ul li {
         padding: 3em;
     }
 
+    .hero {
+        min-height: 450px;
+    }
+
     /* Personal Projects */
 
     .personal-project ul {
@@ -499,6 +578,12 @@ footer ul li {
         height: 300px;
         padding: 0.5em;
         width: 100%;
+    }
+
+    /* Footer */
+
+    .footer-section {
+        margin-right: 100px;
     }
 }
 
