@@ -25,7 +25,7 @@
             <div class="header__hamburger-icon-container">
                 <a href="#" class="header__hamburger-icon" onclick="toggleMobileMenu()">
                     <i class="fas fa-bars fa-2x"></i>
-                    <i class="fas fa-times fa-2x" style="display:none"></i>
+                    <i class="fas fa-times fa-2x"></i>
                 </a>
             </div>
         </div>
@@ -183,18 +183,18 @@
     </footer>
     <script>
         const toggleMobileMenu = () => {
-
             let mobileMenu = document.querySelector(".mobile-menu");
+            let openButton = document.querySelector(".fa-bars");
+            let closeButton = document.querySelector(".fa-times"); 
 
-            if(!mobileMenu.style.display || mobileMenu.style.display == "none") {
-                mobileMenu.style.display = "block";
-                document.querySelector(".fa-bars").style.display = "none";
-                document.querySelector(".fa-times").style.display = "inline";
-            }
-            else if(mobileMenu.style.display == "block") {
-                mobileMenu.style.display = "none";
-                document.querySelector(".fa-bars").style.display = "inline";
-                document.querySelector(".fa-times").style.display = "none";
+            if(mobileMenu.style.maxHeight) {
+                mobileMenu.style.maxHeight = null;
+                openButton.style.display = "block";
+                closeButton.style.display = "none";
+            } else {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+                openButton.style.display = "none";
+                closeButton.style.display = "block";
             }
         };
 
