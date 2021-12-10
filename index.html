@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>Personal Website</title>
@@ -41,7 +42,7 @@
         <section class="hero">
             <div class="hero-layer">
                 <h2 class="hero-heading">Hello, I'm Bryan Cayanan</h2>
-                <p>I am an aspiring <strong>web developer</strong> focused mainly on 
+                <p>I am an aspiring <strong>web developer</strong> focused mainly on
                     <strong>frontend</strong> web development
                 </p>
                 <p>
@@ -53,7 +54,7 @@
             </div>
         </section>
         <section class="contact-bar">
-            <div>Phone Number: 805-608-0066</div>
+            <div>Phone Number: 1-805-608-0066</div>
             <div>Email: cayanan.bryanau@gmail.com</div>
         </section>
         <section class="personal-project-showcase">
@@ -61,11 +62,10 @@
                 <div class="personal-projects__intro">
                     <h2>Personal Projects</h2>
                     <p>
-                        These projects were developed for study (most are deployed
-                        to GitHub Pages)
+                        These projects were developed for study
                     </p>
                     <p>
-                        Each project has a description and a list of some of its features
+                        Each project has a description, a couple of links, an image, and a list of features
                     </p>
                 </div>
                 <div class="personal-project">
@@ -76,15 +76,23 @@
                         <p class="personal-project__description"><strong>A rough draft of a website
                              made for practicing responsive, mobile first design</strong>
                         </p>
-                        <ul class="personal-project__details">
-                            <li>&gt; Media queries</li>
-                            <li>&gt; Flex and grid boxes</li>
-                            <li>&gt; Hamburger navigation menu for smaller screen sizes</li>
-                            <li>&gt; Vanilla JavaScript only</li>
-                        </ul>
                         <a href="https://bryanc123.github.io/Mobile-First-Design/" class="personal-project__link">
-                            Go to Site
+                            Link
                         </a>
+                        <img src="./images/mobile_first_design.png" class="personal-project__image">
+                        <div class="personal-project__features-container">
+                            <button class="personal-project__accordion">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-angle-down"></i>
+                                Features
+                            </button>
+                            <ul class="personal-project__features">
+                                <li>Media queries</li>
+                                <li>Flex boxes</li>
+                                <li>Hamburger navigation menu for smaller screen sizes</li>
+                                <li>Vanilla JavaScript only</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="personal-project slide-in">
@@ -96,12 +104,20 @@
                             <strong>A basic quiz app that displays right and wrong answers after 
                                 completion</strong>
                         </p>
-                        <ul class="personal-project__details">
-                            <li>&gt; Navigation features to choose currently displayed question</li>
-                            <li>&gt; Reset button to restart quiz after completion</li>
-                            <li>&gt; Vanilla JavaScript only</li>
-                        </ul>
-                        <a href="https://bryanc123.github.io/Plain-JavaScript-Quiz/" class="personal-project__link">Take Quiz</a>
+                        <a href="https://bryanc123.github.io/Plain-JavaScript-Quiz/" class="personal-project__link">Link</a>
+                        <img src="./images/quiz.png" class="personal-project__image">
+                        <div class="personal-project__features-container">
+                            <button class="personal-project__accordion">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-angle-down"></i>
+                                Features
+                            </button>
+                            <ul class="personal-project__features">
+                                <li>Navigation features to choose currently displayed question</li>
+                                <li>Reset button to restart quiz after completion</li>
+                                <li>Vanilla JavaScript only</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="personal-project slide-in">
@@ -112,15 +128,23 @@
                         <p class="personal-project__description"><strong>Search and create employee records (test only, so POST
                             operations do not actually change anything on the server)</strong>
                         </p>
-                        <ul class="personal-project__details">
-                            <li>&gt; TypeScript</li>
-                            <li>&gt; Form validation</li>
-                            <li>&gt; Uses the <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder API</a></li>
-                        </ul>
-                        <a href="https://bryanc123.github.io/Employee-Records-Angular/" class="personal-project__link">Go to Site</a>
+                        <a href="https://bryanc123.github.io/Employee-Records-Angular/" class="personal-project__link">Link</a>
+                        <img src="./images/employee_records_angular.png" class="personal-project__image">
+                        <div class="personal-project__features-container">
+                            <button class="personal-project__accordion">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-angle-down"></i>
+                                Features
+                            </button>
+                            <ul class="personal-project__features">
+                                <li>TypeScript</li>
+                                <li>Form validation</li>
+                                <li>Uses the <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder API</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="personal-project slide-in">
+                <!-- <div class="personal-project slide-in">
                     <div class="personal-project__head">
                         <h3 class="personal-project__heading">Book Search React App</h3 class="personal-project__heading">
                     </div>
@@ -135,7 +159,7 @@
                         </ul>
                         <a href="https://github.com/bryanc123/Book-List" class="personal-project__link">Source Code</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <section class="skills">
@@ -166,6 +190,7 @@
                     <li>Express</li>
                     <li>MySQL</li>
                     <li>PHP</li>
+                    <li>ASP.NET Web API</li>
                 </ul>
             </div>
             <div class="skills-tab-content tools">
@@ -181,7 +206,7 @@
         <div class="footer-section">
             <h2>Contact</h2>
             <ul class="contact">
-                <li><strong>Phone Number:</strong> 805-608-0066</li>
+                <li><strong>Phone Number:</strong> 1-805-608-0066</li>
                 <li><strong>Email: </strong> cayanan.bryanau@gmail.com</li>
             </ul>
         </div>
@@ -241,6 +266,29 @@
         sliders.forEach(slider => {
             appearOnScroll.observe(slider);
         });
+
+        // personal project feature accordions
+
+        let acc = document.getElementsByClassName("personal-project__accordion");
+        let i;
+
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                let panel = this.nextElementSibling;
+                let arrow_up = this.children[0];
+                let arrow_down = this.children[1];
+
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    arrow_up.style.display = "inline";
+                    arrow_down.style.display = "none";
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    arrow_up.style.display = "none";
+                    arrow_down.style.display = "inline";
+                } 
+            });
+        }
 
         // skills tabs
 
