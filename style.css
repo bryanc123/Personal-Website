@@ -227,6 +227,11 @@ header {
     to { opacity: 1; }
 }
 
+.hero a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Personal Projects */
 
 .personal-project-showcase {
@@ -256,8 +261,11 @@ header {
 
 .personal-project__image {
     border: 1px solid black;
-    margin-bottom: 20px;
     width: 90%;
+}
+
+.personal-project__caption {
+    font-size: 14px;
 }
 
 .personal-project__body {
@@ -473,6 +481,7 @@ footer ul li {
 }
 
 @media only screen and (min-width: 500px) {
+
     /* Header */
 
     .header__navigation-links {
@@ -487,6 +496,11 @@ footer ul li {
 
     .hero {
         background-size: 100%;
+    }
+
+    .hero-heading {
+        font-size: 2.25em;
+        margin-bottom: 1.25em;
     }
 
     /* Contact Bar */
@@ -543,11 +557,6 @@ footer ul li {
 }
 
 @media only screen and (min-width: 600px) {
-    /* Hero */
-
-    .hero__heading {
-        font-size: 2em;
-    }
 
     /* Blog */
 
@@ -556,6 +565,12 @@ footer ul li {
         height: 150px;
         padding: 0.5em;
         width: 100%;
+    }
+
+    /* Personal Projects */
+
+    .personal-project__caption {
+        font-size: 16px;
     }
     
     /* About */
@@ -574,8 +589,15 @@ footer ul li {
         padding: 3em;
     }
 
+    /* Hero */
+
     .hero {
         min-height: 450px;
+    }
+
+    .hero-heading {
+        font-size: 2em;
+        margin-bottom: 1em;
     }
 
     /* Personal Projects */
@@ -611,11 +633,27 @@ footer ul li {
 }
 
 @media only screen and (min-width: 1300px) {
+
     /* Personal Projects */
 
     .personal-projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero-heading {
+        font-size: 2.6em;
+        margin: 1em 0;
+    }
+
+    .hero p {
+        font-size: 1.2em;
     }
 
     /* Blog */
