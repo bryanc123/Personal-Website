@@ -21,25 +21,12 @@ html {
     font-family: Roboto;
 }
 
-h2 {
-    margin-bottom: 1em;
-}
-
-p {
-    margin-bottom: 1.5em;
-}
-
 ol, ul {
     list-style: none;
 }
 
 main {
     background-color: #EBECF0;
-}
-
-section {
-    padding: 1em;
-    text-align: center;
 }
 
 /* Animations */
@@ -176,6 +163,7 @@ header {
     background-size: 140%;
     min-height: 300px;
     position: relative;
+    text-align: center;
 }
 
 .hero-layer {
@@ -193,12 +181,13 @@ header {
 
 .hero-heading {
     color: white;
-    font-size: 1.25em;
+    font-size: 1.5em;
     margin: 2em 0;
 }
 
 .hero p {
     color: white;
+    margin-bottom: 1.5em;
 }
 
 .hero p:nth-child(2) {
@@ -227,45 +216,96 @@ header {
     to { opacity: 1; }
 }
 
-.hero a {
-    color: white;
+.project-call-to-action a {
+    color: #00FFFF;
+    font-size: 1.2em;
     text-decoration: none;
+}
+.project-call-to-action a:hover {
+    color: white;
 }
 
 /* Personal Projects */
 
 .personal-project-showcase {
     background-color: var(--color-secondary);
+    text-align: center;
 }
 
-.personal-projects__intro {
+.projects__title {
     color: white;
 }
 
-.personal-project {
+/* New */
+
+.project {
     background-color: white;
-    border-radius: 15px;
-    margin: 0 auto 2em auto;
-    max-width: 550px;
+    margin: 20px;
 }
 
-.personal-project__head {
-    background-color: #FFAE42;
-    border-radius: 15px 15px 0 0;
-    padding: 20px;
+.project__heading {
+    background-color: #00BFFF;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 10px 0;
 }
 
-.personal-project__description {
-    margin-bottom: 20px;
+.project__container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
 }
 
-.personal-project__image {
+.expandedImage {
     border: 1px solid black;
-    width: 90%;
+    width: 100%;
 }
 
-.personal-project__caption {
+.image-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+.image-tab-container {
+    width: 32%;
+}
+
+.image-tab {
+    cursor: pointer;
+    width: 100%;
+}
+
+.image-tab-active {
+    border: 1px solid black;
+}
+
+.project__details {
+    padding: 20px 0;
+    text-align: left;
+}
+.project__details p {
     font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.project__link {
+    color: black;
+    display: block;
+    font-weight: bold;
+    margin: 20px 0;
+    text-decoration: none;
+}
+.project__link:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* End New */
+
+.personal-project-showcase {
+    padding: 20px 0;
 }
 
 .personal-project__body {
@@ -284,6 +324,9 @@ header {
     display: none;
 }
 
+.personal-project__features-container {
+    margin: 10px 0;
+}
 .personal-project__features {
     margin-bottom: 20px;
     max-height: 0;
@@ -291,7 +334,8 @@ header {
     transition: max-height 0.2s ease-out;
 }
 .personal-project__features li {
-    margin-bottom: 8px;
+    font-size: 14px;
+    margin: 0 0 8px 15px;
 }
 
 .personal-project__link {
@@ -313,6 +357,19 @@ header {
 }
 
 /* Skills */
+
+.skills {
+    padding: 20px;
+}
+
+.skills__heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills__description {
+    margin-bottom: 20px;
+}
 
 .tab-links-container {
     display: flex;
@@ -475,8 +532,8 @@ footer ul li {
 @media only screen and (min-width: 350px) {
     /* Hero */
 
-    .hero-text-break {
-        display: none;
+    .hero-heading {
+        font-size: 1.75em;
     }
 }
 
@@ -553,6 +610,10 @@ footer ul li {
 
     .footer-section {
         margin-right: 60px;
+    }
+
+    .footer-section h2 {
+        margin-bottom: 20px;
     }
 }
 
@@ -632,6 +693,56 @@ footer ul li {
     }
 }
 
+@media only screen and (min-width: 1000px) {
+    /* Personal Projects */
+
+    .project {
+        margin-bottom: 60px;
+    }
+
+    .project__heading {
+        padding: 20px 0;
+    }
+
+    .project__container {
+        flex-direction: row;
+    }
+
+    .project__images-container {
+        width: 50%;
+    }
+
+    .project__details {
+        border-left: 2px solid rgba(0, 0, 0, 0.2);
+        margin-left: 20px;
+        padding-left: 20px;
+        width: 50%;
+    }
+
+    .project__details p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .project__link {
+        margin: 40px 0;
+    }
+
+    .personal-project__features-container {
+        margin: 10px 0;
+    }
+    .personal-project__features {
+        margin-bottom: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .personal-project__features li {
+        font-size: 0.8rem;
+        margin: 0 0 8px 15px;
+    }
+}
+
 @media only screen and (min-width: 1300px) {
 
     /* Personal Projects */
@@ -644,16 +755,17 @@ footer ul li {
     /* Hero */
 
     .hero {
-        min-height: 500px;
+        min-height: 550px;
     }
 
     .hero-heading {
-        font-size: 2.6em;
-        margin: 1em 0;
+        font-size: 2.2em;
+        margin: 1.6em 0;
     }
 
     .hero p {
         font-size: 1.2em;
+        margin-bottom: 2em;
     }
 
     /* Blog */

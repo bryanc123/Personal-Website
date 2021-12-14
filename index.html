@@ -48,39 +48,51 @@
                 <p>
                     Welcome to my <strong>site</strong>
                 </p>
-                <p>
+                <p class="project-call-to-action">
                     <a href="#personal-project-showcase">
-                        <strong>&gt; Scroll down</strong> to see some of my <br class="hero-text-break"><strong>personal projects</strong>
+                        <i class="fas fa-caret-right"></i> View my projects
                     </a>
                 </p>
             </div>
         </section>
-        <section class="contact-bar">
+        <!-- <section class="contact-bar">
             <div>Phone Number: 1-805-608-0066</div>
             <div>Email: cayanan.bryanau@gmail.com</div>
-        </section>
+        </section> -->
         <section class="personal-project-showcase" id="personal-project-showcase">
-            <div class="personal-projects">
-                <div class="personal-projects__intro" style="align-self: center;">
-                    <h2>Personal Projects</h2>
-                </div>
-                <div class="personal-project">
-                    <div class="personal-project__head">
-                        <h3 class="personal-project__heading">Mobile First Design</h3>
+            <h2 class="projects__title">Personal Projects</h2>
+            <div class="project slide-in">
+                <h2 class="project__heading">Angular Employee Database</h2>
+                <div class="project__container">
+                    <div class="project__images-container">
+                        <div>
+                            <img class="expandedImage" src="./images/employee_records_angular_1.png">
+                        </div>
+                        <div class="image-tabs">
+                            <div class="image-tab-container">
+                                <img class="image-tab image-tab-active" src="./images/employee_records_angular_1.png" onclick="expandImage(this)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/employee_records_angular_2.png" onclick="expandImage(this)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/employee_records_angular_3.png" onclick="expandImage(this)">
+                            </div>
+                        </div>
                     </div>
-                    <div class="personal-project__body">
-                        <p class="personal-project__description"><strong>A rough draft of a website
-                             made for practicing responsive, mobile first design</strong>
+                    <div class="project__details">
+                        <p>
+                            View user records, articles, and comments
                         </p>
-                        <a href="https://github.com/bryanc123/Mobile-First-Design" class="personal-project__link">
-                            Source Code
-                        </a>
-                        <a href="https://bryanc123.github.io/Mobile-First-Design/">
-                            <img src="./images/mobile_first_design.png" class="personal-project__image">
-                        </a>
-                        <p class="personal-project__caption">
-                            Click image to visit site
+                        <p>
+                            Create user records
                         </p>
+                        <a href="https://bryanc123.github.io/Employee-Records-Angular/" class="project__link">
+                            <i class="fas fa-caret-right"></i> Visit Site
+                        </a>
+                        <a href="https://github.com/bryanc123/Employee-Records-Angular/tree/gh-pages" class="project__link">
+                            <i class="fas fa-caret-right"></i> View Source Code
+                        </a>
                         <div class="personal-project__features-container">
                             <button class="personal-project__accordion">
                                 <i class="fas fa-angle-up"></i>
@@ -88,32 +100,87 @@
                                 Features
                             </button>
                             <ul class="personal-project__features">
-                                <li>Media queries</li>
+                                <li>Responsive design</li>
+                                <li>Form validation and submission</li>
+                                <li>Data from the <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder API</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project slide-in">
+                <h2 class="project__heading">Mobile First Design</h2>
+                <div class="project__container">
+                    <div class="project__images-container">
+                        <div>
+                            <img class="expandedImage" src="./images/mobile_first_design_1.png">
+                        </div>
+                        <div class="image-tabs">
+                            <div class="image-tab-container">
+                                <img class="image-tab image-tab-active" src="./images/mobile_first_design_1.png" onclick="expandImage(this)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/mobile_first_design_2.png" onclick="expandImage(this)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/mobile_first_design_3.png" onclick="expandImage(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__details">
+                        <p>
+                            Rough draft of a responsive website that was designed for mobile devices first
+                        </p>
+                        <a href="https://bryanc123.github.io/Mobile-First-Design/" class="project__link">
+                            <i class="fas fa-caret-right"></i> Visit Site
+                        </a>
+                        <a href="https://github.com/bryanc123/Mobile-First-Design" class="project__link">
+                            <i class="fas fa-caret-right"></i> View Source Code
+                        </a>
+                        <div class="personal-project__features-container">
+                            <button class="personal-project__accordion">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-angle-down"></i>
+                                Features
+                            </button>
+                            <ul class="personal-project__features">
+                                <li>Hamburger menu</li>
                                 <li>Flex boxes</li>
-                                <li>Hamburger navigation menu for smaller screen sizes</li>
-                                <li>Vanilla JavaScript only</li>
+                                <li>Image gallery</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="personal-project slide-in">
-                    <div class="personal-project__head">
-                        <h3 class="personal-project__heading">Quiz App</h3>
+            </div>
+            <div class="project slide-in">
+                <h2 class="project__heading">Quiz App</h2>
+                <div class="project__container">
+                    <div class="project__images-container">
+                        <div>
+                            <img class="expandedImage" src="./images/quiz_1.png">
+                        </div>
+                        <div class="image-tabs">
+                            <div class="image-tab-container">
+                                <img class="image-tab image-tab-active" src="./images/quiz_1.png" onclick="expandImage(this)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/quiz_2.png" onclick="expandImage(this)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/quiz_3.png" onclick="expandImage(this)">
+                            </div>
+                        </div>
                     </div>
-                    <div class="personal-project__body">
-                        <p class="personal-project__description">
-                            <strong>A basic quiz app that displays right and wrong answers after 
-                                completion</strong>
+                    <div class="project__details">
+                        <p>
+                            Quiz application written with vanilla JavaScript
                         </p>
-                        <a href="https://github.com/bryanc123/Plain-JavaScript-Quiz" class="personal-project__link">
-                            Source Code
+                        <a href="https://bryanc123.github.io/Plain-JavaScript-Quiz/" class="project__link">
+                            <i class="fas fa-caret-right"></i> Visit Site
                         </a>
-                        <a href="https://bryanc123.github.io/Plain-JavaScript-Quiz/">
-                            <img src="./images/quiz.png" class="personal-project__image">
+                        <a href="https://github.com/bryanc123/Plain-JavaScript-Quiz" class="project__link">
+                            <i class="fas fa-caret-right"></i> View Source Code
                         </a>
-                        <p class="personal-project__caption">
-                            Click image to visit site
-                        </p>
                         <div class="personal-project__features-container">
                             <button class="personal-project__accordion">
                                 <i class="fas fa-angle-up"></i>
@@ -121,65 +188,18 @@
                                 Features
                             </button>
                             <ul class="personal-project__features">
-                                <li>Navigation features to choose currently displayed question</li>
-                                <li>Reset button to restart quiz after completion</li>
-                                <li>Vanilla JavaScript only</li>
+                                <li>Navigation controls for choosing current question</li>
+                                <li>Review of correct and incorrect answers after quiz completion</li>
+                                <li>Retry functionality</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="personal-project slide-in">
-                    <div class="personal-project__head">
-                        <h3 class="personal-project__heading">Employees Angular App</h3 class="personal-project__heading">
-                    </div>
-                    <div class="personal-project__body">
-                        <p class="personal-project__description"><strong>Search and create employee records and view articles
-                            (test API only, so POST requests do not modify data on server)</strong>
-                        </p>
-                        <a href="https://github.com/bryanc123/Employee-Records-Angular/tree/gh-pages" class="personal-project__link">
-                            Source Code
-                        </a>
-                        <a href="https://bryanc123.github.io/Employee-Records-Angular/">
-                            <img src="./images/employee_records_angular.png" class="personal-project__image">
-                        </a>
-                        <p class="personal-project__caption">
-                            Click image to visit site
-                        </p>
-                        <div class="personal-project__features-container">
-                            <button class="personal-project__accordion">
-                                <i class="fas fa-angle-up"></i>
-                                <i class="fas fa-angle-down"></i>
-                                Features
-                            </button>
-                            <ul class="personal-project__features">
-                                <li>TypeScript</li>
-                                <li>Form validation</li>
-                                <li>Uses the <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder API</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="personal-project slide-in">
-                    <div class="personal-project__head">
-                        <h3 class="personal-project__heading">Book Search React App</h3 class="personal-project__heading">
-                    </div>
-                    <div class="personal-project__body">
-                        <p class="personal-project__heading"><strong>Search for books
-                            through the Open Library website</strong>
-                        </p>
-                        <ul class="personal-project__details">
-                            <li>&gt; Created with Create React App</li>
-                            <li>&gt; React hooks</li>
-                            <li>&gt; Uses the <a href="https://openlibrary.org/dev/docs/api/search">Open Library search API</a></li>
-                        </ul>
-                        <a href="https://github.com/bryanc123/Book-List" class="personal-project__link">Source Code</a>
-                    </div>
-                </div> -->
             </div>
         </section>
         <section class="skills">
-            <h2>Web Dev Technologies</h2>
-            <p><strong>Below are the web dev languages and technologies that I have
+            <h2 class="skills__heading">Skillset</h2>
+            <p class="skills__description"><strong>Below are the web development languages and technologies that I have
                 experience with</strong></p>
             <div class="tab-links-container">
                 <button class="tab-links active" onclick="openSkillSection(event, 'frontend-skills')">Frontend</button>
@@ -281,6 +301,24 @@
         sliders.forEach(slider => {
             appearOnScroll.observe(slider);
         });
+
+        // personal project tab galleries
+
+        const expandImage = image => {
+            let expandedImage = image.parentElement.parentElement.parentElement.children[0].children[0];
+            expandedImage.src = image.src;
+
+            let imageTabs = image.parentElement.parentElement.children;
+            let numberOfTabs = image.parentElement.parentElement.children.length;
+            for(let i = 0; i < numberOfTabs; i++) {
+                if(imageTabs[i].children[0].classList.contains("image-tab-active")) {
+                    imageTabs[i].children[0].classList.toggle("image-tab-active");
+                }
+
+            }
+
+            image.classList.add("image-tab-active");
+        }
 
         // personal project feature accordions
 
