@@ -225,18 +225,17 @@ header {
     color: white;
 }
 
-/* Personal Projects */
+/* New */
 
-.personal-project-showcase {
+.projects {
     background-color: var(--color-secondary);
+    padding: 20px 0;
     text-align: center;
 }
 
-.projects__title {
+.projects__heading {
     color: white;
 }
-
-/* New */
 
 .project {
     background-color: white;
@@ -302,17 +301,7 @@ header {
     text-decoration: underline;
 }
 
-/* End New */
-
-.personal-project-showcase {
-    padding: 20px 0;
-}
-
-.personal-project__body {
-    padding: 1em;
-}
-
-.personal-project__accordion {
+.project__accordion {
     background-color: white;
     border: none;
     cursor: pointer;
@@ -324,37 +313,21 @@ header {
     display: none;
 }
 
-.personal-project__features-container {
+.project__features-container {
     margin: 10px 0;
 }
-.personal-project__features {
+.project__features {
     margin-bottom: 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-.personal-project__features li {
+.project__features li {
     font-size: 14px;
     margin: 0 0 8px 15px;
 }
 
-.personal-project__link {
-    background-color: #FFAE42;
-    border-radius: 10px;
-    color: black;
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 250ms;
-}
-.personal-project__link:hover {
-    background-color: #FFC87C;
-    border-radius: 10px;
-    color: black;
-    display: inline-block;
-    text-decoration: none;
-}
+/* End New */
 
 /* Skills */
 
@@ -386,11 +359,9 @@ header {
     padding: 1em;
     transition: background-color 250ms;
 }
-
 .tab-links:hover {
     background-color: var(--color-primary);
 }
-
 .tab-links.active {
     background-color: var(--color-primary);
 }
@@ -400,7 +371,6 @@ header {
     min-height: 300px;
     padding: 1em;
 }
-
 .skills-tab-content ul {
     line-height: 2em;
     text-align:left;
@@ -469,7 +439,6 @@ header {
     margin-right: 5px;
     padding: 6px 10px;
 }
-
 .blog-post__tag-container span:hover {
     cursor: pointer;
 }
@@ -530,11 +499,13 @@ footer ul li {
 }
 
 @media only screen and (min-width: 350px) {
+
     /* Hero */
 
     .hero-heading {
         font-size: 1.75em;
     }
+
 }
 
 @media only screen and (min-width: 500px) {
@@ -568,6 +539,54 @@ footer ul li {
         font-size: 16px;
         justify-content: space-between;
         padding: 10px 20px;
+    }
+
+    /* Personal Projects */
+
+    .project {
+        margin-bottom: 60px;
+    }
+
+    .project__heading {
+        padding: 20px 0;
+    }
+
+    .project__container {
+        flex-direction: row;
+    }
+
+    .project__images-container {
+        width: 50%;
+    }
+
+    .project__details {
+        border-left: 2px solid rgba(0, 0, 0, 0.2);
+        margin-left: 20px;
+        padding-left: 20px;
+        width: 50%;
+    }
+
+    .project__details p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .project__link {
+        margin: 20px 0;
+    }
+
+    .project__features-container {
+        margin: 10px 0;
+    }
+    .project__features {
+        margin-bottom: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .project__features li {
+        font-size: 0.8rem;
+        margin: 0 0 8px 15px;
     }
 
     /* Blog */
@@ -615,6 +634,7 @@ footer ul li {
     .footer-section h2 {
         margin-bottom: 20px;
     }
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -627,21 +647,17 @@ footer ul li {
         padding: 0.5em;
         width: 100%;
     }
-
-    /* Personal Projects */
-
-    .personal-project__caption {
-        font-size: 16px;
-    }
     
     /* About */
 
     .about__heading {
         font-size: 1.5em;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
+
     html {
         font-size: 1.5rem;
     }
@@ -663,7 +679,7 @@ footer ul li {
 
     /* Personal Projects */
 
-    .personal-project ul {
+    .project ul {
         font-size: 20px;
     }
 
@@ -691,63 +707,14 @@ footer ul li {
     .footer-section {
         margin-right: 100px;
     }
-}
 
-@media only screen and (min-width: 1000px) {
-    /* Personal Projects */
-
-    .project {
-        margin-bottom: 60px;
-    }
-
-    .project__heading {
-        padding: 20px 0;
-    }
-
-    .project__container {
-        flex-direction: row;
-    }
-
-    .project__images-container {
-        width: 50%;
-    }
-
-    .project__details {
-        border-left: 2px solid rgba(0, 0, 0, 0.2);
-        margin-left: 20px;
-        padding-left: 20px;
-        width: 50%;
-    }
-
-    .project__details p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-
-    .project__link {
-        margin: 40px 0;
-    }
-
-    .personal-project__features-container {
-        margin: 10px 0;
-    }
-    .personal-project__features {
-        margin-bottom: 20px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-    }
-    .personal-project__features li {
-        font-size: 0.8rem;
-        margin: 0 0 8px 15px;
-    }
 }
 
 @media only screen and (min-width: 1300px) {
 
     /* Personal Projects */
 
-    .personal-projects {
+    .projects {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -776,12 +743,15 @@ footer ul li {
         padding: 0.5em;
         width: 100%;
     }
+
 }
 
 @media only screen and (min-width: 1900px) {
+
     /* Personal Projects */
 
-    .personal-project {
+    .project {
         min-width: 800px;
     }
+
 }

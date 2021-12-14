@@ -49,7 +49,7 @@
                     Welcome to my <strong>site</strong>
                 </p>
                 <p class="project-call-to-action">
-                    <a href="#personal-project-showcase">
+                    <a href="#projects">
                         <i class="fas fa-caret-right"></i> View my projects
                     </a>
                 </p>
@@ -59,8 +59,8 @@
             <div>Phone Number: 1-805-608-0066</div>
             <div>Email: cayanan.bryanau@gmail.com</div>
         </section> -->
-        <section class="personal-project-showcase" id="personal-project-showcase">
-            <h2 class="projects__title">Personal Projects</h2>
+        <section class="projects" id="projects">
+            <h2 class="projects__heading">Personal Projects</h2>
             <div class="project slide-in">
                 <h2 class="project__heading">Angular Employee Database</h2>
                 <div class="project__container">
@@ -82,10 +82,7 @@
                     </div>
                     <div class="project__details">
                         <p>
-                            View user records, articles, and comments
-                        </p>
-                        <p>
-                            Create user records
+                            View user records, articles, and comments; create user records
                         </p>
                         <a href="https://bryanc123.github.io/Employee-Records-Angular/" class="project__link">
                             <i class="fas fa-caret-right"></i> Visit Site
@@ -93,13 +90,13 @@
                         <a href="https://github.com/bryanc123/Employee-Records-Angular/tree/gh-pages" class="project__link">
                             <i class="fas fa-caret-right"></i> View Source Code
                         </a>
-                        <div class="personal-project__features-container">
-                            <button class="personal-project__accordion">
+                        <div class="project__features-container">
+                            <button class="project__accordion">
                                 <i class="fas fa-angle-up"></i>
                                 <i class="fas fa-angle-down"></i>
                                 Features
                             </button>
-                            <ul class="personal-project__features">
+                            <ul class="project__features">
                                 <li>Responsive design</li>
                                 <li>Form validation and submission</li>
                                 <li>Data from the <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder API</a></li>
@@ -137,13 +134,13 @@
                         <a href="https://github.com/bryanc123/Mobile-First-Design" class="project__link">
                             <i class="fas fa-caret-right"></i> View Source Code
                         </a>
-                        <div class="personal-project__features-container">
-                            <button class="personal-project__accordion">
+                        <div class="project__features-container">
+                            <button class="project__accordion">
                                 <i class="fas fa-angle-up"></i>
                                 <i class="fas fa-angle-down"></i>
                                 Features
                             </button>
-                            <ul class="personal-project__features">
+                            <ul class="project__features">
                                 <li>Hamburger menu</li>
                                 <li>Flex boxes</li>
                                 <li>Image gallery</li>
@@ -181,13 +178,13 @@
                         <a href="https://github.com/bryanc123/Plain-JavaScript-Quiz" class="project__link">
                             <i class="fas fa-caret-right"></i> View Source Code
                         </a>
-                        <div class="personal-project__features-container">
-                            <button class="personal-project__accordion">
+                        <div class="project__features-container">
+                            <button class="project__accordion">
                                 <i class="fas fa-angle-up"></i>
                                 <i class="fas fa-angle-down"></i>
                                 Features
                             </button>
-                            <ul class="personal-project__features">
+                            <ul class="project__features">
                                 <li>Navigation controls for choosing current question</li>
                                 <li>Review of correct and incorrect answers after quiz completion</li>
                                 <li>Retry functionality</li>
@@ -322,7 +319,7 @@
 
         // personal project feature accordions
 
-        let acc = document.getElementsByClassName("personal-project__accordion");
+        let acc = document.getElementsByClassName("project__accordion");
         let i;
 
         for (let i = 0; i < acc.length; i++) {
