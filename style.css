@@ -162,7 +162,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 140%;
-    min-height: 320px;
+    min-height: 300px;
     position: relative;
     text-align: center;
 }
@@ -227,7 +227,7 @@ header {
     color: white;
 }
 
-/* New */
+/* Personal Projects */
 
 .projects {
     background-color: var(--color-secondary);
@@ -282,6 +282,22 @@ header {
     border: 1px solid black;
 }
 
+.image-tab__arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.image-tab__arrow-container {
+    opacity: 0;
+    width: 32%;
+}
+
+.image-tab__arrow--active {
+    opacity: 100;
+}
+
 .project__details {
     padding: 20px 0;
     text-align: left;
@@ -328,8 +344,6 @@ header {
     font-size: 16px;
     margin: 0 0 8px 15px;
 }
-
-/* End New */
 
 /* Skills */
 
@@ -590,7 +604,7 @@ footer ul li {
         transition: max-height 0.2s ease-out;
     }
     .project__features li {
-        font-size: 0.8rem;
+        font-size: 16px;
         margin: 0 0 8px 15px;
     }
 
@@ -690,7 +704,7 @@ footer ul li {
 
     /* Personal Projects */
 
-    .project ul {
+    .project__features li {
         font-size: 20px;
     }
 
