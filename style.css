@@ -91,13 +91,11 @@ header {
     color: white;
     padding: 0 10px;
     text-decoration: none;
-    transition: color 500ms;
+    transition: color 0.5s ease-out;
 }
-
 .header__navigation-link:last-of-type {
     border: none;
 }
-
 .header__navigation-link:hover {
     color: #00FFFF;
 }
@@ -161,8 +159,8 @@ header {
     background-image: url('images/laptop.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 140%;
-    min-height: 300px;
+    background-size: 200%;
+    min-height: 400px;
     position: relative;
     text-align: center;
 }
@@ -183,13 +181,13 @@ header {
 .hero-heading {
     color: white;
     font-size: 1.5em;
-    margin: 2em 0;
+    margin: 2.5em 0;
 }
 
 .hero p {
     color: white;
     font-size: 1.2rem;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
 }
 
 .hero p:nth-child(2) {
@@ -219,12 +217,16 @@ header {
 }
 
 .project-call-to-action a {
-    color: #00FFFF;
-    font-size: 1.2em;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
     text-decoration: none;
+    transition: background-color 0.5s ease-out;
 }
 .project-call-to-action a:hover {
-    color: white;
+    background-color: var(--color-primary);
 }
 
 /* Personal Projects */
@@ -308,15 +310,19 @@ header {
 }
 
 .project__link {
-    color: black;
-    display: block;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 10px 0;
+    padding: 10px 20px;
     text-decoration: none;
+    transition: background-color 0.5s ease-out, color 0.5s ease-out;
 }
 .project__link:hover {
-    color: blue;
-    text-decoration: underline;
+    background-color: #00BFFF;
+    color: black;
 }
 
 .project__accordion {
@@ -521,8 +527,39 @@ footer ul li {
 
     /* Hero */
 
+    .hero {
+        background-image: url('images/laptop.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 140%;
+        min-height: 300px;
+        position: relative;
+        text-align: center;
+    }
+    
+    .hero-layer {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .hero strong {
+        color: #00FFFF;
+    }
+    
     .hero-heading {
+        color: white;
         font-size: 1.75em;
+        margin: 2em 0;
+    }
+    
+    .hero p {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 1.5em;
     }
 
 }
@@ -694,12 +731,19 @@ footer ul li {
     /* Hero */
 
     .hero {
-        min-height: 450px;
+        min-height: 500px;
     }
 
     .hero-heading {
         font-size: 1.8em;
         margin-bottom: 1em;
+    }
+
+    .project-call-to-action {
+        margin-top: 80px;
+    }
+    .project-call-to-action a {
+        padding: 20px;
     }
 
     /* Personal Projects */
@@ -759,6 +803,10 @@ footer ul li {
     .hero p {
         font-size: 1.2em;
         margin-bottom: 2em;
+    }
+
+    .project-call-to-action {
+        margin-top: 80px;
     }
 
     /* Blog */
