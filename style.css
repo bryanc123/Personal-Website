@@ -105,10 +105,6 @@ header {
     text-decoration: none;
 }
 
-.header__hamburger-icon:hover {
-    color: #00FFFF;
-}
-
 .fa-times {
     display:none;
 }
@@ -165,7 +161,7 @@ header {
     text-align: center;
 }
 
-.hero-layer {
+.hero__layer {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -182,10 +178,10 @@ header {
     color: #00FFFF;
 }
 
-.hero-heading {
+.hero__heading {
     color: white;
     font-size: 1.5em;
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
 }
 
 .hero p {
@@ -220,10 +216,7 @@ header {
     to { opacity: 1; }
 }
 
-.project-call-to-action {
-    margin-top: 20px;
-}
-.project-call-to-action a {
+.hero__call-to-action {
     background-color: var(--color-secondary);
     border-radius: 10px;
     color: white;
@@ -232,7 +225,7 @@ header {
     text-decoration: none;
     transition: background-color 0.5s ease-out;
 }
-.project-call-to-action a:hover {
+.hero__call-to-action:hover {
     background-color: var(--color-primary);
 }
 
@@ -264,6 +257,16 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10px 10px;
+}
+
+.project__images-container {
+    padding-top: 10px;
+}
+
+.project__images-instruction {
+    font-size: 16px;
+    font-style: italic;
+    text-align: left;
 }
 
 .expandedImage {
@@ -544,23 +547,14 @@ footer ul li {
         text-align: center;
     }
     
-    .hero-layer {
-        background-color: rgba(0, 0, 0, 0.7);
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-    
     .hero strong {
         color: #00FFFF;
     }
     
-    .hero-heading {
+    .hero__heading {
         color: white;
         font-size: 1.75em;
-        margin: 2em 0;
+        margin-bottom: 2em;
     }
     
     .hero p {
@@ -590,7 +584,7 @@ footer ul li {
         min-height: 360px;
     }
 
-    .hero-heading {
+    .hero__heading {
         font-size: 1.75em;
         margin-bottom: 1.25em;
     }
@@ -742,14 +736,11 @@ footer ul li {
         min-height: 500px;
     }
 
-    .hero-heading {
+    .hero__heading {
         font-size: 1.8em;
     }
 
-    .project-call-to-action {
-        margin-top: 20px;
-    }
-    .project-call-to-action a {
+    .hero__call-to-action {
         padding: 20px;
     }
 
@@ -802,18 +793,14 @@ footer ul li {
         min-height: 550px;
     }
 
-    .hero-heading {
+    .hero__heading {
         font-size: 2.2em;
-        margin: 1.6em 0;
+        margin-bottom: 1.6em;
     }
 
     .hero p {
         font-size: 1.2em;
         margin-bottom: 2em;
-    }
-
-    .project-call-to-action {
-        margin-top: 20px;
     }
 
     /* Blog */
