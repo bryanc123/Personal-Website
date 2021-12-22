@@ -166,8 +166,12 @@ header {
 }
 
 .hero-layer {
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    justify-content: center;
     left: 0;
     position: absolute;
     top: 0;
@@ -181,7 +185,7 @@ header {
 .hero-heading {
     color: white;
     font-size: 1.5em;
-    margin: 2.5em 0;
+    margin-bottom: 2.5em;
 }
 
 .hero p {
@@ -216,6 +220,9 @@ header {
     to { opacity: 1; }
 }
 
+.project-call-to-action {
+    margin-top: 20px;
+}
 .project-call-to-action a {
     background-color: var(--color-secondary);
     border-radius: 10px;
@@ -531,8 +538,8 @@ footer ul li {
         background-image: url('images/laptop.jpg');
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 140%;
-        min-height: 300px;
+        background-size: 200%;
+        min-height: 500px;
         position: relative;
         text-align: center;
     }
@@ -580,6 +587,7 @@ footer ul li {
 
     .hero {
         background-size: 100%;
+        min-height: 360px;
     }
 
     .hero-heading {
@@ -628,7 +636,7 @@ footer ul li {
     }
 
     .project__link {
-        margin: 20px 0;
+        margin: 10px 0;
     }
 
     .project__features-container {
@@ -736,11 +744,10 @@ footer ul li {
 
     .hero-heading {
         font-size: 1.8em;
-        margin-bottom: 1em;
     }
 
     .project-call-to-action {
-        margin-top: 80px;
+        margin-top: 20px;
     }
     .project-call-to-action a {
         padding: 20px;
@@ -806,7 +813,7 @@ footer ul li {
     }
 
     .project-call-to-action {
-        margin-top: 80px;
+        margin-top: 20px;
     }
 
     /* Blog */
