@@ -339,8 +339,8 @@ header {
     background-color: white;
     border: none;
     cursor: pointer;
-    font-size: 1em;
-    margin-bottom: 10px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 .fa-angle-down {
@@ -348,17 +348,16 @@ header {
 }
 
 .project__features-container {
-    margin: 10px 0;
+    margin-top: 10px;
 }
 .project__features {
-    margin-bottom: 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
 .project__features li {
     font-size: 16px;
-    margin: 0 0 8px 15px;
+    margin: 0 0 12px 15px;
 }
 
 /* Skills */
@@ -633,18 +632,21 @@ footer ul li {
         margin: 10px 0;
     }
 
+    .project__accordion {
+        margin-bottom: 20px;
+    }
+
     .project__features-container {
-        margin: 10px 0;
+        margin-top: 20px;
     }
     .project__features {
-        margin-bottom: 20px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
     }
     .project__features li {
         font-size: 16px;
-        margin: 0 0 8px 15px;
+        margin: 0 0 20px 15px;
     }
 
     /* Blog */
