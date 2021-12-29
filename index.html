@@ -64,7 +64,9 @@
                 <div class="project__container">
                     <div class="project__images-container">
                         <div>
-                            <img class="expandedImage" src="./images/employee_records_angular_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/employee_records_angular_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/employee_records_angular_2.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/employee_records_angular_3.png">
                         </div>
                         <div class="image-tabs">
                             <div class="image-tab-container">
@@ -123,7 +125,9 @@
                 <div class="project__container">
                     <div class="project__images-container">
                         <div>
-                            <img class="expandedImage" src="./images/mobile_first_design_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/mobile_first_design_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/mobile_first_design_2.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/mobile_first_design_3.png">
                         </div>
                         <div class="image-tabs">
                             <div class="image-tab-container">
@@ -179,7 +183,9 @@
                 <div class="project__container">
                     <div class="project__images-container">
                         <div>
-                            <img class="expandedImage" src="./images/quiz_game_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/quiz_game_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/quiz_game_2.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/quiz_game_3.png">
                         </div>
                         <div class="image-tabs">
                             <div class="image-tab-container">
@@ -235,7 +241,9 @@
                 <div class="project__container">
                     <div class="project__images-container">
                         <div>
-                            <img class="expandedImage" src="./images/quiz_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/quiz_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/quiz_2.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/quiz_3.png">
                         </div>
                         <div class="image-tabs">
                             <div class="image-tab-container">
@@ -395,8 +403,13 @@
         // personal project tab galleries
 
         const expandImage = (image, tabArrowIndex) => {
-            let expandedImage = image.parentElement.parentElement.parentElement.children[0].children[0];
-            expandedImage.src = image.src;
+            
+            let expandedImages = image.parentElement.parentElement.parentElement.children[0].children;
+
+            for(let i = 0; i < expandedImages.length; i++) {
+                expandedImages[i].style.display = "none";
+            }
+            expandedImages[tabArrowIndex].style.display = "block";
 
             // clear borders and up arrows
             let imageTabs = image.parentElement.parentElement.children;
@@ -456,6 +469,13 @@
             document.querySelector("." + skillSection).style.display = "block";
             event.currentTarget.className += " active";
         };
+
+        // load expanded images
+        const imageContainers = document.getElementsByClassName("project__images-container");
+
+        for(let i = 0; i < imageContainers.length; i++) {
+            imageContainers[i].children[0].children[0].style.display = "block";
+        }
     </script>
 </body>
 </html>

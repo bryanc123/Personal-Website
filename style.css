@@ -271,7 +271,26 @@ header {
 
 .expandedImage {
     border: 1px solid black;
+    display: none;
     width: 100%;
+}
+
+.fadeExpandedImage {
+    -webkit-animation-name: fadeInExpandedImage;
+    animation-name: fadeInExpandedImage;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-duration: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInExpandedImage {
+    from {opacity: 0.2}
+    to {opacity: 1}
+}
+@-webkit-keyframes fadeInExpandedImage {
+    from {opacity: 0.2}
+    to {opacity: 1}
 }
 
 .image-tabs {
