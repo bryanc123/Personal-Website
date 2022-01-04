@@ -19,8 +19,8 @@
                 </a>
             </h1>
             <div class="header__navigation-links">
-                <!--<a href="./blog.html" class="header__navigation-link">Blog</a>-->
                 <a href="https://github.com/bryanc123" class="header__navigation-link">GitHub</a>
+                <a href="./posts.html" class="header__navigation-link">Posts</a>
                 <a href="./about.html" class="header__navigation-link">About</a>
             </div>
             <div class="header__hamburger-icon-container">
@@ -34,8 +34,8 @@
     <main>
         <section class="mobile-menu">
             <div class="mobile-menu__navigation-links">
-                <!--<a href="./blog.html" class="mobile-menu__navigation-link">Blog</a>-->
                 <a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a>
+                <a href="./posts.html" class="mobile-menu__navigation-link">Posts</a>
                 <a href="./about.html" class="mobile-menu__navigation-link">About</a>
             </div>
         </section>
@@ -46,7 +46,7 @@
                     I am an aspiring <strong> web developer</strong>
                 </p>
                 <p>
-                    Welcome to my <strong>site</strong>
+                    Welcome to my website
                 </p>
                 <a class="hero__call-to-action" href="#projects">
                     <i class="fas fa-caret-right"></i> View my projects
@@ -296,63 +296,67 @@
             </div>
         </section>
         <section class="skills">
-            <h2 class="skills__heading">Skills</h2>
-            <p class="skills__description"><strong>Below are the web development languages and technologies that I have
-                experience with</strong></p>
-            <div class="tab-links-container">
-                <button class="tab-links active" onclick="openSkillSection(event, 'frontend-skills')">Frontend</button>
-                <button class="tab-links" onclick="openSkillSection(event, 'backend-skills')">Backend</button>
-                <button class="tab-links" onclick="openSkillSection(event, 'tools')">Tools</button>
-            </div>
-            <div class="skills-tab-content frontend-skills">
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>TypeScript</li>
-                    <li>React</li>
-                    <li>Angular 2+</li>
-                    <li>ASP.NET Core MVC</li>
-                    <li>ASP.NET Core Razor Pages</li>
-                </ul>
-            </div>
-            <div class="skills-tab-content backend-skills">
-                <ul>
-                    <li>Node.js</li>
-                    <li>npm</li>
-                    <li>Express</li>
-                    <li>MySQL</li>
-                    <li>PHP</li>
-                    <li>ASP.NET Web API</li>
-                </ul>
-            </div>
-            <div class="skills-tab-content tools">
-                <ul>
-                    <li>Git</li>
-                    <li>Postman</li>
-                    <li>XAMPP</li>
-                </ul>
+            <div class="skills__container">
+                <h2 class="skills__heading">Skills</h2>
+                <p class="skills__description"><strong>Below are the web development languages and technologies that I have
+                    experience with</strong></p>
+                <div class="tab-links-container">
+                    <button class="tab-links active" onclick="openSkillSection(event, 'frontend-skills')">Frontend</button>
+                    <button class="tab-links" onclick="openSkillSection(event, 'backend-skills')">Backend</button>
+                    <button class="tab-links" onclick="openSkillSection(event, 'tools')">Tools</button>
+                </div>
+                <div class="skills-tab-content frontend-skills">
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Angular 2+</li>
+                        <li>ASP.NET Core MVC</li>
+                        <li>ASP.NET Core Razor Pages</li>
+                    </ul>
+                </div>
+                <div class="skills-tab-content backend-skills">
+                    <ul>
+                        <li>Node.js</li>
+                        <li>npm</li>
+                        <li>Express</li>
+                        <li>MySQL</li>
+                        <li>PHP</li>
+                        <li>ASP.NET Web API</li>
+                    </ul>
+                </div>
+                <div class="skills-tab-content tools">
+                    <ul>
+                        <li>Git</li>
+                        <li>Postman</li>
+                        <li>XAMPP</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-section">
-            <h2>Contact</h2>
-            <ul class="contact">
-                <li><strong>Phone Number:</strong> 1-805-608-0066</li>
-                <li><strong>Email: </strong> cayanan.bryanau@gmail.com</li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h2>Links</h2>
-            <ul>
-                <li>
-                    <a href="https://github.com/bryanc123">GitHub Account</a>
-                </li>
-                <li>
-                    <a href="https://github.com/bryanc123/Personal-Website">Source Code</a>
-                </li>
-            </ul>
+        <div class="footer__container">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <ul class="contact">
+                    <li><strong>Phone Number:</strong> 1-805-608-0066</li>
+                    <li><strong>Email: </strong> cayanan.bryanau@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/bryanc123">GitHub Account</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bryanc123/Personal-Website">Source Code</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
     <script>

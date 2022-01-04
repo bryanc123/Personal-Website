@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Website</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="header__heading">
+                <a href="./index.html" class="header__link">
+                    Bryan Cayanan
+                    <span class="header__subheading"> | Portfolio</span>
+                </a>
+            </h1>
+            <div class="header__navigation-links">
+                <a href="https://github.com/bryanc123" class="header__navigation-link">GitHub</a>
+                <a href="./posts.html" class="header__navigation-link">Posts</a>
+                <a href="./about.html" class="header__navigation-link">About</a>
+            </div>
+            <div class="header__hamburger-icon-container">
+                <a href="#" class="header__hamburger-icon" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars fa-2x"></i>
+                    <i class="fas fa-times fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="mobile-menu">
+            <div class="mobile-menu__navigation-links">
+                <a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a>
+                <a href="./posts.html" class="mobile-menu__navigation-link">Posts</a>
+                <a href="./about.html" class="mobile-menu__navigation-link">About</a>
+            </div>
+        </section>
+        <section class="posts">
+            <div class="posts__container">
+                <div class="post">
+                    <h2 class="post__heading">Updated Media Queries for Very Large Screens</h2>
+                    <p class="post__date">Posted on 1/03/2022</p class="post__heading">
+                    <div class="post__content">
+                        <p>
+                            I have updated the media queries for this website so that on really large screens that have
+                            a width greater than 1900px, content is centered, its width constrained by the max-width CSS property.
+                        </p>
+                    </div>
+                </div>
+                <div class="post">
+                    <h2 class="post__heading">Quiz Game</h2>
+                    <p class="post__date">Posted on 12/30/2021</p class="post__heading">
+                    <div class="post__content">
+                        <p>
+                            Recently, I completed another personal project, which was a quiz game.
+                        </p>
+                        <p>
+                            I already have a quiz application listed among my personal projects, but this one is a bit
+                            different.
+                        </p>
+                        <p>
+                            The first quiz app is self-paced, more of a study tool than a game. It has no time limits, the user
+                            can jump to different questions, and upon completion of the quiz, a review of correct and incorrect answers
+                            is displayed.
+                        </p>
+                        <p>
+                            This new quiz app is a game. Questions have to be answered in order and within a time limit, and the user cannot make more than two
+                            mistakes or the game is over. Two lifelines are provided to help the user select the correct answer.
+                        </p>
+                        <p>
+                            The time limits are implemented using setInterval. After each question is answered, the timer is cleared and reset.
+                            At one point in testing the app, I found that the timer was counting down too quickly. It seemed that the timer
+                            was not being cleared even though the timer ID was being passed into clearInterval, so multiple instances of setInterval
+                            were running. As it turns out, I had given the timer ID variable the same name as another variable that referred
+                            to a DOM element. This simple and easiliy avaoidable mistake showed me that I had to be more organized.
+                        </p>
+                        <p>
+                            The logic and control flow of the program were tricky for me to grasp, and though the application
+                            functions as I intended it to, the code that I wrote could still be much cleaner and more efficient.
+                        </p>
+                    </div>
+                </div>
+                <div class="post">
+                    <h2 class="post__heading">Angular Material Form Stepper</h2>
+                    <p class="post__date">Posted on 12/26/2021</p class="post__heading">
+                    <div class="post__content">
+                        <p>
+                            My Angular application contains a particularly long form, so I recently decided to use
+                            a form stepper provided by Angular Material to divide the form into parts and make the process of
+                            filling it out smoother.
+                        </p>
+                        <p>
+                            I tried to follow one of the examples provided on the website for a responsive form stepper,
+                            but errors came up stating that the classes I was trying to import were not available.
+                        </p>
+                        <p>
+                            After about an hour of tinkering with my code, I realized that I was not using the latest version
+                            of Angular Material. In fact, running npm outdated showed that many project dependencies needed
+                            to be updated.
+                        </p>
+                        <p>
+                            Now the application has a form stepper that can switch between vertical and horizontal orientation
+                            depending on screen size.
+                        </p>
+                    </div>
+                </div>
+                <div class="post">
+                    <h2 class="post__heading">Updates Page</h2>
+                    <p class="post__date">Posted on 12/02/2021</p class="post__heading">
+                    <div class="post__content">
+                        <p>
+                            This page is where I'll post updates regarding this website and personal projects.
+                        </p>
+                        <p>
+                            It is not a full-fledged blog. Each post will be a few sentences long.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__container">
+            <div class="footer-section">
+                <h2>Contact</h2>
+                <ul class="contact">
+                    <li><strong>Phone Number:</strong> 1-805-608-0066</li>
+                    <li><strong>Email: </strong> cayanan.bryanau@gmail.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Links</h2>
+                <ul>
+                    <li>
+                        <a href="https://github.com/bryanc123">GitHub Account</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/bryanc123/Personal-Website">Source Code</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const toggleMobileMenu = () => {
+            let mobileMenu = document.querySelector(".mobile-menu");
+            let openButton = document.querySelector(".fa-bars");
+            let closeButton = document.querySelector(".fa-times"); 
+
+            if(mobileMenu.style.maxHeight) {
+                mobileMenu.style.maxHeight = null;
+                openButton.style.display = "block";
+                closeButton.style.display = "none";
+            } else {
+                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+                openButton.style.display = "none";
+                closeButton.style.display = "block";
+            }
+        };
+    </script>
+</body>
+</html>
