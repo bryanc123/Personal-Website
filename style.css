@@ -69,8 +69,42 @@ header {
 }
 
 .header__heading {
+    animation: fadeInHeader 1s ease-out;
+    animation-fill-mode: forwards;
     font-family: Estonia;
     font-size: 2.5em;
+}
+
+.header__navigation-links {
+    animation: fadeInNavigation 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.header__hamburger-icon-container {
+    animation: fadeInNavigation 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInHeader {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInNavigation {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .header__link {
