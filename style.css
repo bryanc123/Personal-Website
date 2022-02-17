@@ -482,21 +482,45 @@ header {
 
 /* Posts */
 
-.posts {
-    padding: 20px;
-}
-.posts__container {
+.pagination {
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    font-size: 1rem;
+    margin: 20px auto;
     max-width: 1100px;
     padding: 20px;
 }
 
+.pagination__button {
+    background-color: var(--color-secondary);
+    color: white;
+    font-size: 1rem;
+    margin-right: 5px;
+    padding: 10px 15px;
+}
+.pagination__button:hover {
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+}
+.pagination__button--selected {
+    background-color: var(--color-primary);
+}
+
+.posts {
+    padding: 20px;
+}
+
+.posts__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
 .post {
-    border-bottom: 1px solid var(--color-secondary);
-    padding: 10px 0 30px 0;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px 20px 30px 20px;
 }
 .post:last-of-type {
     border: none;

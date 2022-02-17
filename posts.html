@@ -38,14 +38,50 @@
                 <a href="./about.html" class="mobile-menu__navigation-link">About</a>
             </div>
         </section>
+        <section class="pagination">
+            <div class="pagination__container"></div>
+        </section>
         <section class="posts">
             <div class="posts__container">
+                <div class="post">
+                    <h2 class="post__heading">Pagination</h2>
+                    <p class="post__date">Posted on 2/16/2022</p class="post__heading">
+                    <div class="post__content">
+                        <p>
+                            I have implemented pagination for this posts page.
+                        </p>
+                        <p>
+                            It seemed like a simple task at first, but I realized that that was only the case
+                            because there were only a few pages to account for. If there are dozens of pages available,
+                            then simply rendering a button for each page is not an adequate solution. The UI would be cluttered
+                            with too many buttons.
+                        </p>
+                        <p>
+                            So, the page navigation menu is rendered differently depending on how many pages there are.
+                            If there are 8 pages or less, then a button is rendered for each page. If there are more than 8 pages,
+                            then some pages will be omitted from the page navigation menu and replaced with ellipses.
+                            The buttons for the first and last pages are always present. If the current page is 3 or greater, then there
+                            should always be at least 2 page buttons rendered before the button for the current page. If the current page
+                            is at least 2 less than the total number of pages, then there should be at least 2 page buttons rendered
+                            after the button for the current page.
+                        </p>
+                        <p>
+                            Figuring out how to implement this behavior was a confusing process for me, and it took me a little over 2 hours
+                            before I finished coding the page menu. There was one strange bug in which the wrong numbers would be displayed for
+                            the page buttons after the current page button. For example, if I selected page 5, then the page buttons after 5 were
+                            51 and 52. I found out that the variable used for the current page was a string when it was supposed to be an integer,
+                            so numbers were being concatenated as strings instead of added together as intended. So, the variable for the current page
+                            had to be cast into an integer in order for the logic for determining page button numbers to work.
+                        </p>
+                    </div>
+                </div>
                 <div class="post">
                     <h2 class="post__heading">Header Animations</h2>
                     <p class="post__date">Posted on 2/02/2022</p class="post__heading">
                     <div class="post__content">
                         <p>
                             I added a couple of simple animations to the header of this website.
+                        </p>
                     </div>
                 </div>
                 <div class="post">
@@ -93,7 +129,7 @@
                             At one point in testing the app, I found that the timer was counting down too quickly. It seemed that the timer
                             was not being cleared even though the timer ID was being passed into clearInterval, so multiple instances of setInterval
                             were running. As it turns out, I had given the timer ID variable the same name as another variable that referred
-                            to a DOM element. This simple and easiliy avaoidable mistake showed me that I had to be more organized.
+                            to a DOM element. This simple and easiliy avoidable mistake showed me that I had to be more organized.
                         </p>
                         <p>
                             The logic and control flow of the program were tricky for me to grasp, and though the application
@@ -133,7 +169,7 @@
                             This page is where I'll post updates regarding this website and personal projects.
                         </p>
                         <p>
-                            It is not a full-fledged blog. Each post will be a few sentences long.
+                            It is not a full-fledged blog. Each post will be a few sentences or paragraphs long.
                         </p>
                     </div>
                 </div>
@@ -178,6 +214,142 @@
                 closeButton.style.display = "block";
             }
         };
+
+        // pagination
+        let currentPage = 1;
+        const pageOffset = 5;
+        const numberOfPosts = document.getElementsByClassName("post").length;
+        const numberOfPages = Math.floor((numberOfPosts + pageOffset - 1) / pageOffset);
+
+        const paginationContainer = document.querySelector(".pagination__container");
+
+        const renderPagination = () => {
+            paginationContainer.innerHTML = "Page: ";
+
+            if(numberOfPages <= 8) {
+                for(let i = 0; i < numberOfPages; i++) {
+                    let pageButton = document.createElement("button");
+                    pageButton.classList.add("pagination__button");
+
+                    pageButton.addEventListener("click", function(event) {
+                        navigateToPage(event.target.innerHTML);
+                    });
+
+                    if(i === currentPage - 1) {
+                        pageButton.classList.add("pagination__button--selected");
+                    }
+
+                    pageButton.innerHTML = i + 1;
+                    paginationContainer.appendChild(pageButton);
+                }
+            } else {
+                // first page button
+                let firstPageButton = document.createElement("button");
+                firstPageButton.classList.add("pagination__button");
+
+                firstPageButton.addEventListener("click", function(event) {
+                    navigateToPage(1);
+                });
+
+                if(currentPage === 1) {
+                    firstPageButton.classList.add("pagination__button--selected");
+                }
+
+                firstPageButton.innerHTML = 1;
+                paginationContainer.appendChild(firstPageButton);
+
+                // add first ellipsis if currentPage >= 5
+                if(currentPage >= 5) {
+                    let node = document.createTextNode("...");
+                    paginationContainer.appendChild(node);
+                }
+
+                // check two pages before current page
+                for(let i = currentPage - 2; i <= currentPage; i++) {
+                    if(i > 1 && i !== numberOfPages) {
+                        let pageButton = document.createElement("button");
+                        pageButton.classList.add("pagination__button");
+
+                        pageButton.addEventListener("click", function(event) {
+                            navigateToPage(event.target.innerHTML);
+                        });
+
+                        if(i == currentPage) {
+                            pageButton.classList.add("pagination__button--selected");
+                        }
+
+                        pageButton.innerHTML = i;
+                        paginationContainer.appendChild(pageButton);
+                    }
+                }
+
+                console.log("Break");
+                // check two pages after current page
+                for(let i = currentPage + 1; i < currentPage + 3; i++) {
+                    if(numberOfPages - i > 0) {
+                        console.log(i);
+                        let pageButton = document.createElement("button");
+                        pageButton.classList.add("pagination__button");
+
+                        pageButton.addEventListener("click", function(event) {
+                            navigateToPage(event.target.innerHTML);
+                        });
+
+                        if(currentPage === i) {
+                            pageButton.classList.add("pagination__button--selected");
+                        }
+
+                        pageButton.innerHTML = i;
+                        paginationContainer.appendChild(pageButton);
+                    }
+                }
+
+                // second ellipsis if currentPage <= numberOfPages - 4
+                if(currentPage <= numberOfPages - 4) {
+                    let node = document.createTextNode("...");
+                    paginationContainer.appendChild(node);
+                }
+
+                // last page button
+                let lastPageButton = document.createElement("button");
+                lastPageButton.classList.add("pagination__button");
+
+                lastPageButton.addEventListener("click", function(event) {
+                    navigateToPage(numberOfPages);
+                });
+
+                if(currentPage === numberOfPages) {
+                    lastPageButton.classList.add("pagination__button--selected");
+                }
+
+                lastPageButton.innerHTML = numberOfPages;
+                paginationContainer.appendChild(lastPageButton);
+            }
+        };
+
+        const navigateToPage = page => {
+            currentPage = parseInt(page);
+            renderPagination();
+            renderPosts();
+        };
+
+        const renderPosts = () => {
+            const postsContainer = document.querySelector(".posts__container");
+            console.log(postsContainer.children.length);
+            for(let i = 0; i < postsContainer.childElementCount; i++) {
+                postsContainer.children[i].style.display = "none";
+            }
+
+            for(let i = (currentPage - 1) * pageOffset; i < currentPage * pageOffset; i++) {
+                postsContainer.children[i].style.display = "block";
+            }
+        }
+
+        window.onload = () => {
+            renderPagination();
+            renderPosts();
+        };
+
     </script>
 </body>
 </html>
