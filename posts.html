@@ -40,6 +40,7 @@
         </section>
         <section class="pagination">
             <div class="pagination__container"></div>
+            <div class="pagination__results">aaaaaaaaaaa</div>
         </section>
         <section class="posts">
             <div class="posts__container">
@@ -217,11 +218,14 @@
 
         // pagination
         let currentPage = 1;
-        const pageOffset = 5;
+        const pageLimit = 5;
         const numberOfPosts = document.getElementsByClassName("post").length;
-        const numberOfPages = Math.floor((numberOfPosts + pageOffset - 1) / pageOffset);
+        const numberOfPages = Math.floor((numberOfPosts + pageLimit - 1) / pageLimit);
 
+        // DOM elements
         const paginationContainer = document.querySelector(".pagination__container");
+        const paginationResults = document.querySelector(".pagination__results");
+        const postsContainer = document.querySelector(".posts__container");
 
         const renderPagination = () => {
             paginationContainer.innerHTML = "Page: ";
@@ -283,7 +287,6 @@
                     }
                 }
 
-                console.log("Break");
                 // check two pages after current page
                 for(let i = currentPage + 1; i < currentPage + 3; i++) {
                     if(numberOfPages - i > 0) {
@@ -325,29 +328,45 @@
                 lastPageButton.innerHTML = numberOfPages;
                 paginationContainer.appendChild(lastPageButton);
             }
+
+            // pagination results
+            let startingPost = (currentPage - 1) * pageLimit + 1;
+
+            let displayedPostsCount = 0;
+            for(let i = 0; i < postsContainer.children.length; i++) {
+                if(postsContainer.children[i].style.display === "block") {
+                    displayedPostsCount++;
+                }
+            }
+            
+            let endingPost = (currentPage - 1) * pageLimit + displayedPostsCount;
+
+            paginationResults.innerHTML = startingPost === endingPost ?
+                `Showing Post ${startingPost}` :
+                `Showing Posts ${startingPost} to ${endingPost}`;
         };
 
         const navigateToPage = page => {
             currentPage = parseInt(page);
-            renderPagination();
             renderPosts();
+            renderPagination();
         };
 
         const renderPosts = () => {
-            const postsContainer = document.querySelector(".posts__container");
-            console.log(postsContainer.children.length);
             for(let i = 0; i < postsContainer.childElementCount; i++) {
                 postsContainer.children[i].style.display = "none";
             }
 
-            for(let i = (currentPage - 1) * pageOffset; i < currentPage * pageOffset; i++) {
-                postsContainer.children[i].style.display = "block";
+            for(let i = (currentPage - 1) * pageLimit; i < currentPage * pageLimit; i++) {
+                if(postsContainer.children[i]?.style.display) {
+                    postsContainer.children[i].style.display = "block";
+                }
             }
         }
 
         window.onload = () => {
-            renderPagination();
             renderPosts();
+            renderPagination();
         };
 
     </script>
