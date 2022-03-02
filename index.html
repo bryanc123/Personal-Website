@@ -60,6 +60,63 @@
         <section class="projects" id="projects">
             <h2 class="projects__heading">Personal Projects</h2>
             <div class="project slide-in">
+                <h2 class="project__heading">Flower Shop React App</h2>
+                <div class="project__container">
+                    <div class="project__images-container">
+                        <div>
+                            <img class="expandedImage fadeExpandedImage" src="./images/flower_shop_1.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/flower_shop_2.png">
+                            <img class="expandedImage fadeExpandedImage" src="./images/flower_shop_3.png">
+                        </div>
+                        <div class="image-tabs">
+                            <div class="image-tab-container">
+                                <img class="image-tab image-tab-active" src="./images/flower_shop_1.png" onclick="expandImage(this, 0)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/flower_shop_2.png" onclick="expandImage(this, 1)">
+                            </div>
+                            <div class="image-tab-container">
+                                <img class="image-tab" src="./images/flower_shop_3.png" onclick="expandImage(this, 2)">
+                            </div>
+                        </div>
+                        <div class="image-tab__arrows">
+                            <div class="image-tab__arrow-container image-tab__arrow--active">
+                                <i class="fas fa-caret-up"></i>
+                            </div>
+                            <div class="image-tab__arrow-container">
+                                <i class="fas fa-caret-up"></i>
+                            </div>
+                            <div class="image-tab__arrow-container">
+                                <i class="fas fa-caret-up"></i>
+                            </div>
+                        </div>
+                        <p class="project__images-instruction">Click on thumbnail to expand</p>
+                    </div>
+                    <div class="project__details">
+                        <p>
+                            App with some cart functionality
+                        </p>
+                        <a href="https://bryanc123.github.io/Flower-Shop/" class="project__link">
+                            <i class="fas fa-caret-right"></i> Visit Site
+                        </a>
+                        <a href="https://github.com/bryanc123/Flower-Shop/tree/gh-pages" class="project__link">
+                            <i class="fas fa-caret-right"></i> Source Code
+                        </a>
+                        <div class="project__features-container">
+                            <button class="project__accordion">
+                                <i class="fas fa-angle-up"></i>
+                                <i class="fas fa-angle-down"></i>
+                                Features
+                            </button>
+                            <ul class="project__features">
+                                <li>Responsive design</li>
+                                <li>Cart functionality</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project slide-in">
                 <h2 class="project__heading">Angular Employee Database</h2>
                 <div class="project__container">
                     <div class="project__images-container">
