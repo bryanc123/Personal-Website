@@ -525,7 +525,7 @@ header {
 .post {
     background-color: white;
     margin-bottom: 20px;
-    padding: 10px 20px 30px 20px;
+    padding: 30px 20px;
 }
 .post:last-of-type {
     border: none;
@@ -539,7 +539,7 @@ header {
 .post__date {
     font-size: 0.8rem;
     font-style: italic;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .post__content p {
@@ -548,7 +548,8 @@ header {
 }
 .post__content a {
     text-decoration: none;
-}.post__content a:hover {
+}
+.post__content a:hover {
     text-decoration: underline;
 }
 
