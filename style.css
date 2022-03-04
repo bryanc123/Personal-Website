@@ -512,6 +512,7 @@ header {
 }
 
 .posts {
+    min-height: 60vh;
     padding: 20px;
 }
 

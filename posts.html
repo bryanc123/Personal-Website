@@ -40,7 +40,7 @@
         </section>
         <section class="pagination">
             <div class="pagination__container"></div>
-            <div class="pagination__results">aaaaaaaaaaa</div>
+            <div class="pagination__results"></div>
         </section>
         <section class="posts">
             <div class="posts__container">
@@ -261,6 +261,12 @@
         const postsContainer = document.querySelector(".posts__container");
 
         const renderPagination = () => {
+            if(postsContainer.children.length === 0) {
+                paginationContainer.innerHTML = "No Posts";
+
+                return;
+            };
+
             paginationContainer.innerHTML = "Page: ";
 
             if(numberOfPages <= 8) {
@@ -386,12 +392,14 @@
         };
 
         const renderPosts = () => {
+            if(postsContainer.children.length === 0) return;
+
             for(let i = 0; i < postsContainer.childElementCount; i++) {
                 postsContainer.children[i].style.display = "none";
             }
 
             for(let i = (currentPage - 1) * pageLimit; i < currentPage * pageLimit; i++) {
-                if(postsContainer.children[i]?.style.display) {
+                if(postsContainer.children[i].style.display) {
                     postsContainer.children[i].style.display = "block";
                 }
             }
