@@ -23,21 +23,23 @@
                 <a href="./about.html" class="header__navigation-link">About</a>
             </div>
             <div class="header__hamburger-icon-container">
-                <a href="#" class="header__hamburger-icon" onclick="toggleMobileMenu()">
+                <a href="#" class="header__hamburger-icon" onclick="openMobileMenu()">
                     <i class="fas fa-bars fa-2x"></i>
-                    <i class="fas fa-times fa-2x"></i>
                 </a>
             </div>
         </div>
     </header>
     <main>
-        <section class="mobile-menu">
-            <div class="mobile-menu__navigation-links">
-                <a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a>
-                <a href="./posts.html" class="mobile-menu__navigation-link">Posts</a>
-                <a href="./about.html" class="mobile-menu__navigation-link">About</a>
-            </div>
-        </section>
+        <div class="mobile-menu">
+            <nav>
+                <span class="mobile-menu-close" onclick="closeMobileMenu()">&times;</span>
+                <ul>
+                    <li><a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a></li>
+                    <li><a href="./posts.html" class="mobile-menu__navigation-link">Posts</a></li>
+                    <li><a href="./about.html" class="mobile-menu__navigation-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
         <section class="about">
             <div class="about__container">
                 <div class="about__content">
@@ -102,20 +104,12 @@
         </div>
     </footer>
     <script>
-        const toggleMobileMenu = () => {
-            let mobileMenu = document.querySelector(".mobile-menu");
-            let openButton = document.querySelector(".fa-bars");
-            let closeButton = document.querySelector(".fa-times"); 
+        const openMobileMenu = () => {
+            document.querySelector(".mobile-menu").style.width = "100%";
+        };
 
-            if(mobileMenu.style.maxHeight) {
-                mobileMenu.style.maxHeight = null;
-                openButton.style.display = "block";
-                closeButton.style.display = "none";
-            } else {
-                mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-                openButton.style.display = "none";
-                closeButton.style.display = "block";
-            }
+        const closeMobileMenu = () => {
+            document.querySelector(".mobile-menu").style.width = 0;
         };
     </script>
 </body>
