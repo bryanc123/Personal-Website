@@ -33,8 +33,9 @@
         <div class="mobile-menu">
             <nav>
                 <span class="mobile-menu-close" onclick="closeMobileMenu()">&times;</span>
-                <ul>
+                <ul class="mobile-menu__navigation-links">
                     <li><a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a></li>
+                    <li><a href="./index.html" class="mobile-menu__navigation-link">Home</a></li>
                     <li><a href="./posts.html" class="mobile-menu__navigation-link">Posts</a></li>
                     <li><a href="./about.html" class="mobile-menu__navigation-link">About</a></li>
                 </ul>
@@ -104,12 +105,31 @@
         </div>
     </footer>
     <script>
+        // mobile menu
+
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileMenuLinks = document.querySelector(".mobile-menu__navigation-links").children;
+
         const openMobileMenu = () => {
-            document.querySelector(".mobile-menu").style.width = "100%";
+            mobileMenu.style.width = "100%";
+
+            for(let i = 0; i < mobileMenuLinks.length; i++) {
+                mobileMenuLinks[i].style.opacity = 1;
+
+                let offset = 60 * i + 20;
+                mobileMenuLinks[i].style.top = `${offset}px`;
+            }
         };
 
         const closeMobileMenu = () => {
-            document.querySelector(".mobile-menu").style.width = 0;
+            mobileMenu.style.width = 0;
+
+            for(let i = 0; i < mobileMenuLinks.length; i++) {
+                mobileMenuLinks[i].style.opacity = 0;
+
+                let offset = 60 * i + 40;
+                mobileMenuLinks[i].style.top = `${offset}px`;
+            }
         };
     </script>
 </body>

@@ -422,27 +422,30 @@
         </div>
     </footer>
     <script>
-        const openMobileMenu = () => {
-            document.querySelector(".mobile-menu").style.width = "100%";
-            let mobileLinks = document.querySelector(".mobile-menu__navigation-links").children;
+        // mobile menu
 
-            for(let i = 0; i < mobileLinks.length; i++) {
-                mobileLinks[i].style.opacity = 1;
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const mobileMenuLinks = document.querySelector(".mobile-menu__navigation-links").children;
+
+        const openMobileMenu = () => {
+            mobileMenu.style.width = "100%";
+
+            for(let i = 0; i < mobileMenuLinks.length; i++) {
+                mobileMenuLinks[i].style.opacity = 1;
 
                 let offset = 60 * i + 20;
-                mobileLinks[i].style.top = `${offset}px`;
+                mobileMenuLinks[i].style.top = `${offset}px`;
             }
         };
 
         const closeMobileMenu = () => {
-            document.querySelector(".mobile-menu").style.width = 0;
-            let mobileLinks = document.querySelector(".mobile-menu__navigation-links").children;
+            mobileMenu.style.width = 0;
 
-            for(let i = 0; i < mobileLinks.length; i++) {
-                mobileLinks[i].style.opacity = 0;
+            for(let i = 0; i < mobileMenuLinks.length; i++) {
+                mobileMenuLinks[i].style.opacity = 0;
 
                 let offset = 60 * i + 40;
-                mobileLinks[i].style.top = `${offset}px`;
+                mobileMenuLinks[i].style.top = `${offset}px`;
             }
         };
 
