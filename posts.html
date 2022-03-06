@@ -406,13 +406,19 @@
         };
 
         const renderPosts = () => {
-            if(postsContainer.children.length === 0) return;
+            if(postsContainer.children.length === 0) {
+                return;
+            }
 
             for(let i = 0; i < postsContainer.childElementCount; i++) {
                 postsContainer.children[i].style.display = "none";
             }
 
             for(let i = (currentPage - 1) * pageLimit; i < currentPage * pageLimit; i++) {
+                if(postsContainer.children[i] === undefined) {
+                    continue;
+                }
+                
                 if(postsContainer.children[i].style.display) {
                     postsContainer.children[i].style.display = "block";
                 }
@@ -423,7 +429,6 @@
             renderPosts();
             renderPagination();
         };
-
     </script>
 </body>
 </html>
