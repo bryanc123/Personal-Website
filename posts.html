@@ -22,17 +22,16 @@
                 <a href="./posts.html" class="header__navigation-link">Posts</a>
                 <a href="./about.html" class="header__navigation-link">About</a>
             </div>
-            <div class="header__hamburger-icon-container">
-                <a href="#" class="header__hamburger-icon" onclick="openMobileMenu()">
-                    <i class="fas fa-bars fa-2x"></i>
-                </a>
+            <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </header>
     <main>
         <div class="mobile-menu">
             <nav>
-                <span class="mobile-menu-close" onclick="closeMobileMenu()">&times;</span>
                 <ul class="mobile-menu__navigation-links">
                     <li><a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a></li>
                     <li><a href="./index.html" class="mobile-menu__navigation-link">Home</a></li>
@@ -47,6 +46,31 @@
         </section>
         <section class="posts">
             <div class="posts__container">
+                <div class="post">
+                    <h2 class="post__heading">Updated Mobile Menu Animations</h2>
+                    <p class="post__date">Posted on 3/06/2022</p class="post__heading">
+                    <div class="post__content">
+                        <p>
+                            The mobile menu for this website is now more animated.
+                        </p>
+                        <p>
+                            When the mobile menu is opened, the links appear in a staggered fashion
+                            because of the animation-delay CSS property.
+                        </p>
+                        <p>
+                            The icon for the mobile menu transforms from three bars to an X when the mobile menu is opened
+                            and transforms the other way when the menu is closed.
+                        </p>
+                        <p>
+                            I got the CSS for transforming the bars from this link:
+                            <a href="https://w3bits.com/animated-menu-icon-css/">https://w3bits.com/animated-menu-icon-css/</a>
+                        </p>
+                        <p>
+                            However, instead of transforming the icon on hover, the icon on my website is transformed on click
+                            through JavaScript.
+                        </p>
+                    </div>
+                </div>
                 <div class="post">
                     <h2 class="post__heading">Flower Shop React App</h2>
                     <p class="post__date">Posted on 3/02/2022</p class="post__heading">
@@ -238,10 +262,26 @@
     <script>
         // mobile menu
 
+        const mobileMenuIconBars = document.querySelector(".mobile-menu-icon").children;
         const mobileMenu = document.querySelector(".mobile-menu");
         const mobileMenuLinks = document.querySelector(".mobile-menu__navigation-links").children;
+        let mobileMenuOpen = false;
+
+        const toggleMobileMenu = () => {
+            if(!mobileMenuOpen) {
+                mobileMenuOpen = true;
+                openMobileMenu();
+            } else {
+                mobileMenuOpen = false;
+                closeMobileMenu();
+            }
+        };
 
         const openMobileMenu = () => {
+            mobileMenuIconBars[0].style.transform = "translateY(12px) rotate(135deg)";
+            mobileMenuIconBars[1].style.transform = "scale(0)";
+            mobileMenuIconBars[2].style.transform = "translateY(-12px) rotate(-135deg)";
+
             mobileMenu.style.width = "100%";
 
             for(let i = 0; i < mobileMenuLinks.length; i++) {
@@ -253,6 +293,10 @@
         };
 
         const closeMobileMenu = () => {
+            mobileMenuIconBars[0].style.transform = "translateY(0) rotate(0)";
+            mobileMenuIconBars[1].style.transform = "scale(1)";
+            mobileMenuIconBars[2].style.transform = "translateY(0) rotate(0)";
+
             mobileMenu.style.width = 0;
 
             for(let i = 0; i < mobileMenuLinks.length; i++) {

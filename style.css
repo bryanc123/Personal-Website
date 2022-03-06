@@ -72,7 +72,7 @@ header {
     animation: fadeInHeader 1s ease-out;
     animation-fill-mode: forwards;
     font-family: Estonia;
-    font-size: 2.5em;
+    font-size: 2.2em;
 }
 
 .header__navigation-links {
@@ -80,7 +80,7 @@ header {
     animation-fill-mode: forwards;
 }
 
-.header__hamburger-icon-container {
+.mobile-menu-icon {
     animation: fadeInNavigation 1s ease-out;
     animation-fill-mode: forwards;
 }
@@ -132,15 +132,6 @@ header {
     color: #00FFFF;
 }
 
-.header__hamburger-icon {
-    color: white;
-    text-decoration: none;
-}
-
-.fa-times {
-    display:none;
-}
-
 /* Contact Bar */
 
 .contact-bar {
@@ -182,6 +173,24 @@ header {
     color: #08E8F0;
 }
 
+.mobile-menu-icon {
+    width: 40px;
+    z-index: 2;
+}
+
+.mobile-menu-icon div {
+    background-color: #fff;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 5px;
+    margin: 7px 0;
+    transition: all .2s ease-in-out;
+}
+.mobile-menu-icon:hover div {
+    background-color: #08E8F0;
+}
+
 .mobile-menu__navigation-links {
     align-items: center;
     display: flex;
@@ -213,18 +222,6 @@ header {
     transition: opacity 0.5s linear 0.4s, top 0.5s linear 0.4s;
     position: absolute;
     top: 220px;
-}
-
-.mobile-menu-close {
-    font-size: 32px;
-    margin-left: 50px;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-}
-.mobile-menu-close:hover {
-    color: #08E8F0;
-    cursor: pointer;
 }
 
 /* Hero */
@@ -659,6 +656,12 @@ footer ul li {
 
 @media only screen and (min-width: 350px) {
 
+    /* Header */
+
+    .header__heading {
+        font-size: 2.5em;
+    }
+
     /* Hero */
 
     .hero {
@@ -692,12 +695,12 @@ footer ul li {
 @media only screen and (min-width: 500px) {
 
     /* Header */
-
+    
     .header__navigation-links {
         display: block;
     }
 
-    .header__hamburger-icon-container {
+    .mobile-menu-icon {
         display: none;
     }
 

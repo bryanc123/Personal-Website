@@ -23,17 +23,16 @@
                 <a href="./posts.html" class="header__navigation-link">Posts</a>
                 <a href="./about.html" class="header__navigation-link">About</a>
             </div>
-            <div class="header__hamburger-icon-container">
-                <a href="#" class="header__hamburger-icon" onclick="openMobileMenu()">
-                    <i class="fas fa-bars fa-2x"></i>
-                </a>
+            <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </header>
     <main>
         <div class="mobile-menu">
             <nav>
-                <span class="mobile-menu-close" onclick="closeMobileMenu()">&times;</span>
                 <ul class="mobile-menu__navigation-links">
                     <li><a href="https://github.com/bryanc123" class="mobile-menu__navigation-link">GitHub</a></li>
                     <li><a href="./index.html" class="mobile-menu__navigation-link">Home</a></li>
@@ -424,10 +423,26 @@
     <script>
         // mobile menu
 
+        const mobileMenuIconBars = document.querySelector(".mobile-menu-icon").children;
         const mobileMenu = document.querySelector(".mobile-menu");
         const mobileMenuLinks = document.querySelector(".mobile-menu__navigation-links").children;
+        let mobileMenuOpen = false;
+
+        const toggleMobileMenu = () => {
+            if(!mobileMenuOpen) {
+                mobileMenuOpen = true;
+                openMobileMenu();
+            } else {
+                mobileMenuOpen = false;
+                closeMobileMenu();
+            }
+        };
 
         const openMobileMenu = () => {
+            mobileMenuIconBars[0].style.transform = "translateY(12px) rotate(135deg)";
+            mobileMenuIconBars[1].style.transform = "scale(0)";
+            mobileMenuIconBars[2].style.transform = "translateY(-12px) rotate(-135deg)";
+
             mobileMenu.style.width = "100%";
 
             for(let i = 0; i < mobileMenuLinks.length; i++) {
@@ -439,6 +454,10 @@
         };
 
         const closeMobileMenu = () => {
+            mobileMenuIconBars[0].style.transform = "translateY(0) rotate(0)";
+            mobileMenuIconBars[1].style.transform = "scale(1)";
+            mobileMenuIconBars[2].style.transform = "translateY(0) rotate(0)";
+
             mobileMenu.style.width = 0;
 
             for(let i = 0; i < mobileMenuLinks.length; i++) {
