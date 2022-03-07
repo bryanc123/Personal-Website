@@ -187,9 +187,6 @@ header {
     margin: 7px 0;
     transition: all .2s ease-in-out;
 }
-.mobile-menu-icon:hover div {
-    background-color: #08E8F0;
-}
 
 .mobile-menu__navigation-links {
     align-items: center;
