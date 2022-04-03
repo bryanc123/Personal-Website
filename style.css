@@ -132,19 +132,6 @@ header {
     color: #00FFFF;
 }
 
-/* Contact Bar */
-
-.contact-bar {
-    align-items: flex-start;
-    background-color: #303030;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8rem;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
-
 /* Mobile Menu */
 
 .mobile-menu {
@@ -508,6 +495,42 @@ header {
     background-color: var(--color-primary);
 }
 
+.tab-links:nth-child(1) {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in,
+      -webkit-transform 400ms ease-in;
+    opacity: 0;
+}
+.tab-links:nth-child(2) {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in,
+      -webkit-transform 400ms ease-in;
+    transition-delay: 150ms;
+    opacity: 0;
+}
+.tab-links:nth-child(3) {
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in,
+      -webkit-transform 400ms ease-in;
+    transition-delay: 300ms;
+    opacity: 0;
+}
+
+.tab-links.appear {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .skills-tab-content {
     background-color: white;
     min-height: 300px;
@@ -719,16 +742,6 @@ footer ul li {
     .hero__heading {
         font-size: 1.75em;
         margin-bottom: 1.25em;
-    }
-
-    /* Contact Bar */
-
-    .contact-bar {
-        align-items: flex-start;
-        flex-direction: row;
-        font-size: 16px;
-        justify-content: space-between;
-        padding: 10px 20px;
     }
 
     /* Personal Projects */
