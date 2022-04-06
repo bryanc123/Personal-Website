@@ -21,12 +21,12 @@ html {
     font-family: Roboto;
 }
 
-ol, ul {
-    list-style: none;
+body {
+    background-color: #EBECF0;
 }
 
-main {
-    background-color: #EBECF0;
+ol, ul {
+    list-style: none;
 }
 
 /* Animations */
