@@ -425,7 +425,7 @@
         </div>
     </footer>
     <script>
-        // mobile menu
+        /* Mobile Menu */
 
         const mobileMenuIconBars = document.querySelector(".mobile-menu-icon").children;
         const mobileMenu = document.querySelector(".mobile-menu");
@@ -472,11 +472,10 @@
             }
         };
 
-        // fade in animations
+        /* Fade In Animations */
 
         const sliders = document.querySelectorAll(".slide-in");
         const tabLinks = document.querySelectorAll(".tab-links");
-        const skillsTabContentContainer = document.querySelector(".skills-tab-content-container");
 
         const slideInOptions = {
             threshold: 0,
@@ -505,7 +504,7 @@
             appearOnScroll.observe(tabLink);
         });
 
-        // personal project tab galleries
+        /* Personal Project Tabs */
 
         const expandImage = (image, tabArrowIndex) => {
             
@@ -533,7 +532,14 @@
             image.parentElement.parentElement.nextElementSibling.children[tabArrowIndex].classList.toggle("image-tab__arrow--active");
         }
 
-        // personal project image modal
+        // load expanded images
+        const imageContainers = document.getElementsByClassName("project__images-container");
+
+        for(let i = 0; i < imageContainers.length; i++) {
+            imageContainers[i].children[0].children[0].style.display = "block";
+        }
+
+        /* Personal Project Image Modal */
 
         const modal = document.querySelector(".project__image-modal");
         const modalImage = document.querySelector(".project__image-modal-image");
@@ -559,7 +565,7 @@
             }
         }
 
-        // personal project feature accordions
+        /* Personal Project Feature Accordions */
 
         let acc = document.getElementsByClassName("project__accordion");
         let i;
@@ -582,7 +588,7 @@
             });
         }
 
-        // skills tabs
+        /* Skills Tabs */
 
         const openSkillSection = (event, skillSection) => {
             let i, tabContent, tabLinks;
@@ -600,14 +606,6 @@
             document.querySelector("." + skillSection).style.display = "block";
             event.currentTarget.className += " active";
         };
-
-        // load expanded images
-        const imageContainers = document.getElementsByClassName("project__images-container");
-
-        for(let i = 0; i < imageContainers.length; i++) {
-            imageContainers[i].children[0].children[0].style.display = "block";
-        }
-
     </script>
 </body>
 </html>
