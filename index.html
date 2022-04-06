@@ -44,8 +44,8 @@
         <div class="project__image-modal">
             <div class="project__image-modal-image-container">
                 <img class="project__image-modal-image">
-                <button class="project__image-modal-close">X</button>
             </div>
+            <button class="project__image-modal-close">&times;</button>
         </div>
         <section class="hero">
             <div class="hero__layer">
@@ -538,12 +538,6 @@
         const modal = document.querySelector(".project__image-modal");
         const modalImage = document.querySelector(".project__image-modal-image");
         const modalClose = document.querySelector(".project__image-modal-close");
-
-        // const openImageModal = (image) => {
-        //     modal.style.display = "flex";
-        //     alert(image.src);
-        // }
-
         const modalImages = document.getElementsByClassName("expandedImage");
 
         for(let i = 0; i < modalImages.length; i++) {
@@ -552,11 +546,6 @@
                 modalImage.src = modalImages[i].src;
             });
         }
-
-        // When the user clicks on the button, open the modal 
-        // btn.onclick = function() {
-        //     modal.style.display = "block";
-        // }
 
         // close modal by clicking close button
         modalClose.onclick = function() {
