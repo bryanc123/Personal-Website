@@ -112,10 +112,6 @@ header {
     text-decoration: none;
 }
 
-.header__subheading {
-    font-size: 0.6em;
-}
-
 .header__navigation-links {
     display: none;
     font-size: 1.2rem;
